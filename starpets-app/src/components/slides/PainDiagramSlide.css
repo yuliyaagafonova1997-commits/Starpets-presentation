@@ -45,7 +45,7 @@
 .pain-spoke:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  border-color: var(--red);
+  /* border-color removed */ background-color: #f5f5f7;
 }
 
 .pain-spoke-icon {

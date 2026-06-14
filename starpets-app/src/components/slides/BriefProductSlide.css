@@ -33,7 +33,7 @@
 }
 
 .brief-task:hover {
-  border-color: var(--accent);
+  /* border-color removed */ background-color: #f5f5f7;
 }
 
 .brief-task-text {
