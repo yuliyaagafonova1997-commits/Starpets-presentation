@@ -1,0 +1,64 @@
+.line-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.line-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.line-tick-label {
+  font-size: 11px;
+  fill: var(--text-secondary);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 500;
+}
+
+.line-axis-label {
+  font-size: 10px;
+  fill: var(--text-secondary);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.line-legend {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 0;
+  margin: 0;
+}
+
+.line-legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.line-legend-swatch {
+  width: 14px;
+  height: 4px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.line-legend-baseline {
+  font-style: italic;
+}
+
+.line-compact .line-svg {
+  max-height: 180px;
+}
+
+.line-compact .line-tick-label {
+  font-size: 10px;
+}

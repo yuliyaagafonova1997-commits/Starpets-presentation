@@ -1,0 +1,61 @@
+.kpi-card {
+  --kpi-accent: var(--accent);
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  border-left: 4px solid var(--kpi-accent);
+  min-width: 0;
+}
+
+.kpi-glyph {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.kpi-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.kpi-value {
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text-primary);
+  font-feature-settings: 'tnum' 1;
+}
+
+.kpi-caption {
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin-top: 6px;
+}
+
+.kpi-compact {
+  padding: 18px 22px;
+  border-left-width: 3px;
+}
+
+.kpi-compact .kpi-value {
+  font-size: clamp(36px, 4vw, 48px);
+}
+
+.kpi-compact .kpi-caption {
+  font-size: 12px;
+}

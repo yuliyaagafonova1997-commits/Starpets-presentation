@@ -1,0 +1,226 @@
+/* Hypothesis / OpenQuestion slides — single thesis, big verdict pill */
+
+.hypo-slide {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 12px 0 8px;
+  min-height: 0;
+}
+
+.hypo-left {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.hypo-num {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hypo-num::before {
+  content: '';
+  width: 32px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.hypo-headline {
+  font-size: clamp(34px, 4.4vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.slide-dark .hypo-headline {
+  color: var(--text-inverse);
+}
+
+.hypo-body {
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 0;
+}
+
+.slide-dark .hypo-body {
+  color: rgba(245, 245, 247, 0.75);
+}
+
+.hypo-verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  align-self: flex-start;
+  border: 1px solid var(--border);
+}
+
+.slide-dark .hypo-verdict {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--text-inverse);
+}
+
+.hypo-verdict-confirmed {
+  background: rgba(48, 209, 88, 0.12);
+  color: #1f7a3a;
+  border-color: rgba(48, 209, 88, 0.3);
+}
+
+.slide-dark .hypo-verdict-confirmed {
+  background: rgba(48, 209, 88, 0.2);
+  color: #6ee89a;
+  border-color: rgba(48, 209, 88, 0.4);
+}
+
+.hypo-verdict-reformulated {
+  background: rgba(255, 159, 10, 0.12);
+  color: #b25e00;
+  border-color: rgba(255, 159, 10, 0.3);
+}
+
+.slide-dark .hypo-verdict-reformulated {
+  background: rgba(255, 159, 10, 0.2);
+  color: #ffb84d;
+  border-color: rgba(255, 159, 10, 0.4);
+}
+
+.hypo-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.hypo-evidence {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.slide-dark .hypo-evidence {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hypo-evidence h4 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.slide-dark .hypo-evidence h4 {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hypo-evidence ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hypo-evidence li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.slide-dark .hypo-evidence li {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hypo-evidence li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.hypo-link {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+/* Open question variant */
+
+.question-headline {
+  font-size: clamp(36px, 4.6vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.slide-dark .question-headline {
+  color: var(--text-inverse);
+}
+
+.question-quote {
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  color: var(--text-primary);
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+  margin: 0;
+}
+
+.slide-dark .question-quote {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.question-meta {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slide-dark .question-meta {
+  color: rgba(255, 255, 255, 0.5);
+}
