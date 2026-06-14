@@ -13,8 +13,6 @@
   background: var(--card-bg);
   border-radius: var(--radius-sm);
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .phase-chip-num {
@@ -58,8 +56,6 @@
   padding: 24px 28px;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .cycle-chart-title {
