@@ -28,19 +28,84 @@
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--bg-primary);
+      background: #E8E8ED;
       color: var(--text-primary);
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
-    .container { max-width: 980px; margin: 0 auto; padding: 0 48px; }
-    .hero { padding: 70px 0 60px; text-align: center; }
-    .hero h1 { font-size: clamp(40px, 8vw, 80px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; margin-bottom: 20px; }
-    .hero .subtitle { font-size: clamp(20px, 3vw, 28px); color: var(--text-secondary); font-weight: 400; margin-bottom: 32px; }
-    .hero .tagline { font-size: clamp(24px, 4vw, 36px); font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 16px; margin-top: -20px; }
-    .hero .description { font-size: 19px; color: var(--text-secondary); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
-    section { padding: 60px 0 80px; }
-    section:nth-child(even) { background: var(--bg-secondary); }
+
+    /* === A4 Horizontal Slides === */
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+    @media print {
+      body { background: white; }
+      .slides-wrapper { padding: 0; gap: 0; }
+      .slide {
+        width: 297mm;
+        height: 210mm;
+        max-width: 297mm;
+        max-height: 210mm;
+        box-shadow: none;
+        border-radius: 0;
+        page-break-after: always;
+        page-break-inside: avoid;
+      }
+    }
+    .slides-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      gap: 20px;
+    }
+    .slide {
+      width: 297mm;
+      height: 210mm;
+      min-width: 297mm;
+      min-height: 210mm;
+      max-width: 297mm;
+      max-height: 210mm;
+      background: var(--bg-primary);
+      border-radius: 4px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .slide-inner {
+      flex: 1;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-content {
+      flex: 1;
+      padding: 80px 100px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-footer {
+      padding: 8px 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--text-secondary);
+      flex-shrink: 0;
+    }
+    .slide-footer .logo { font-weight: 700; color: var(--text-primary); font-size: 13px; }
+    .slide-num { font-weight: 600; }
+
+    .container { max-width: 100%; margin: 0 auto; padding: 0 48px; }
+    .hero { padding: 0; text-align: center; }
+    section { padding: 0; }
+    section:nth-child(even) { background: transparent; }
     .section-title { font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 20px; }
     .section-subtitle { font-size: 19px; color: var(--text-secondary); line-height: 1.6; }
     .section-header { margin-bottom: 40px; }
@@ -166,15 +231,12 @@
     .hypo-num { width: 36px; height: 36px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; flex-shrink: 0; color: #fff; }
     .hypo-content h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
     .hypo-content p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
-    footer { background: var(--bg-tertiary); color: var(--text-inverse); padding: 60px 0; text-align: center; }
-    footer .logo { color: var(--text-inverse); font-size: 28px; margin-bottom: 4px; font-weight: 700; }
-    footer p { color: var(--text-secondary); font-size: 14px; }
-    .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
-    .research-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: transform 0.3s, box-shadow 0.3s; }
+    .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 16px; }
+    .research-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: transform 0.3s, box-shadow 0.3s; }
     .research-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); }
-    .research-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
-    .research-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
-    .audience-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+    .research-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+    .research-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+    .audience-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
     .audience-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 20px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
     .audience-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1); }
     .audience-num { font-size: 36px; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 12px; }
@@ -204,365 +266,393 @@
 </head>
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <span class="badge badge-primary">PATH OF EXILE</span>
-      <span class="badge badge-secondary">MARKETPLACE</span>
-      <h1>Starpets</h1>
-      <p class="tagline">Безопасная площадка для торговли валютой PoE</p>
-      <p class="description">Без бана. Без обмана. Без лишних вопросов.</p>
-    </div>
-  </section>
+  <div class="slides-wrapper">
 
-  <!-- SLIDE 1: MAIN INSIGHT -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Главный инсайт</h2>
-      </div>
-      <div class="insight-tags">
-        <div class="insight-tag"><span class="icon">🎮</span> hardcore</div>
-        <div class="insight-tag"><span class="icon">👤</span> adult</div>
-        <div class="insight-tag"><span class="icon">🔄</span> cyclical pattern</div>
-        <div class="insight-tag"><span class="icon">⚠️</span> fear of losing the account</div>
-        <div class="insight-tag"><span class="icon">💰</span> prefers currency</div>
-        <div class="insight-tag"><span class="icon">🌟</span> trusts KOLs</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SLIDE 2: FIELD RESEARCH -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Полевая разведка</h2>
-      </div>
-      <div class="research-grid">
-        <div class="research-card">
-          <h3>1. Составление опроса</h3>
-          <p>портрет игрока → опыт в PoE → отношение к RMT и маркетплейсам → боли и барьеры в игре → триггеры для покупки/продажи валюты → преференции по функционалу маркетплейса</p>
-        </div>
-        <div class="research-card">
-          <h3>2. Карта сообществ</h3>
-          <p>Discord серверы трейдеров (TFT; Eternal Trove) и крупных стримеров; сабреддиты по игре; группы в Facebook; группы маркетплейсов-конкурентов.</p>
+    <!-- SLIDE 1: HERO -->
+    <div class="slide">
+      <div class="slide-inner" style="justify-content: center; align-items: center; text-align: center;">
+        <div class="slide-content" style="justify-content: center; align-items: center;">
+          <span class="badge badge-primary">PATH OF EXILE</span>
+          <span class="badge badge-secondary">MARKETPLACE</span>
+          <h1 style="font-size: clamp(40px,6vw,64px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; margin: 16px 0;">Starpets</h1>
+          <p style="font-size: clamp(20px,3vw,26px); font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 12px;">Безопасная площадка для торговли валютой PoE</p>
+          <p style="font-size: 17px; color: var(--text-secondary);">Без бана. Без обмана. Без лишних вопросов.</p>
         </div>
       </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>1 / 15</span></div>
     </div>
-  </section>
 
-  <!-- SLIDE 3: RESEARCHER INSIGHTS -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Инсайты для ресерчера</h2>
-      </div>
-      <div class="insight-row">
-        <div class="insight-num">1</div>
-        <div class="insight-text">Запрос на размещение — бан, игнор или негатив</div>
-      </div>
-      <div class="insight-row">
-        <div class="insight-num">2</div>
-        <div class="insight-text">Пост без запроса — больше конверсия, но также больше банов</div>
-      </div>
-      <div class="conclusions-box">
-        <h4>Выводы</h4>
-        <ol>
-          <li>Обещание награды за прохождение не всегда мотивирует, а иногда и наоборот</li>
-          <li>Размещение ссылок — красная тряпка</li>
-          <li>Нужно закладывать больший срок на исследование (получение аппрува → валидация → пост → результаты → выход на интервью)</li>
-          <li>Если продукт под NDA — нужно потестить маскировку (например, исследование для диплома). Если называем продукт — конверсия в аппрув будет выше</li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- SLIDE 4: AUDIENCE -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Кто наша аудитория</h2>
-      </div>
-      <div class="audience-grid">
-        <div class="audience-card">
-          <div class="audience-num">23–32</div>
-          <h3>Возраст</h3>
-          <p>Возраст — 23-32 года</p>
-        </div>
-        <div class="audience-card">
-          <div class="audience-num">HC</div>
-          <h3>Hardcore / Semi-hardcore</h3>
-          <p>Hardcore/semi-hardcore игроки с сотнями часов в игре</p>
-        </div>
-        <div class="audience-card">
-          <div class="audience-num">PoE1+2</div>
-          <h3>Ветераны</h3>
-          <p>Ветераны играют и в PoE1 и в PoE2. Новички пропускают первую часть</p>
-        </div>
-        <div class="audience-card">
-          <div class="audience-num">🧠</div>
-          <h3>Взрослый вайб</h3>
-          <p>Взрослый вайб сообщества, более осознанные решения, меньше влияние «виральной» рекламы</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SLIDE 5: PAIN DIAGRAM -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Главные боли и барьеры</h2>
-      </div>
-      <div class="pain-diagram">
-        <div class="pain-center">Главный барьер:<br>страх потерять аккаунт</div>
-        <div class="pain-spokes">
-          <div class="pain-spoke"><span class="pain-spoke-icon">🚫</span><div><h4>Lack of trust against the rules</h4><p>leads to a ban</p></div></div>
-          <div class="pain-spoke"><span class="pain-spoke-icon">😰</span><div><h4>Afraid of getting scammed</h4><p>страх обмана</p></div></div>
-          <div class="pain-spoke"><span class="pain-spoke-icon">⏳</span><div><h4>A long withdrawal</h4><p>долгий вывод средств</p></div></div>
-          <div class="pain-spoke"><span class="pain-spoke-icon">🔗</span><div><h4>P2P is fishy</h4><p>P2P воспринимается как подозрительное</p></div></div>
-          <div class="pain-spoke"><span class="pain-spoke-icon">💸</span><div><h4>High commissions</h4><p>высокие комиссии</p></div></div>
-          <div class="pain-spoke"><span class="pain-spoke-icon">😤</span><div><h4>Support is cringe</h4><p>rude vendors, хамская поддержка</p></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SLIDE 6: PAIN DIAGRAM 2 -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Главные боли и барьеры</h2>
-      </div>
-      <div class="pain-diagram">
-        <div class="pain-center" style="width:300px;height:300px;">P2P is fishy — P2P воспринимается как что-то подозрительное</div>
-        <div class="pain-periphery">
-          <div class="pain-periph-item"><div class="icon">🚫</div><h4>Lack of trust</h4><p>against the rules, leads to a ban</p></div>
-          <div class="pain-periph-item"><div class="icon">😰</div><h4>Afraid of scam</h4><p>страх быть обманутым</p></div>
-          <div class="pain-periph-item"><div class="icon">⏳</div><h4>Long withdrawal</h4><p>долгий вывод средств</p></div>
-          <div class="pain-periph-item"><div class="icon">💸</div><h4>High commissions</h4><p>высокие комиссии</p></div>
-          <div class="pain-periph-item"><div class="icon">😤</div><h4>Support is cringe</h4><p>rude vendors</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SLIDE 7: PAIN POINTS 3 -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Главные боли и барьеры</h2>
-      </div>
-      <div class="pains-horizontal">
-        <div class="pain-h-item"><div class="label">fear</div><div><h4>lack of trust against the rules, leads to a ban</h4><p>страх нарушить правила и получить бан</p></div></div>
-        <div class="pain-h-item"><div class="label">fear</div><div><h4>afraid of getting scammed</h4><p>страх быть обманутым</p></div></div>
-        <div class="pain-h-item"><div class="label">time</div><div><h4>a long withdrawal</h4><p>долгий вывод средств</p></div></div>
-        <div class="pain-h-item"><div class="label">trust</div><div><h4>p2p is fishy</h4><p>P2P воспринимается как подозрительное</p></div></div>
-        <div class="pain-h-item"><div class="label">cost</div><div><h4>high commissions</h4><p>высокие комиссии платформы</p></div></div>
-        <div class="pain-h-item"><div class="label">support</div><div><h4>support is cringe, rude vendors</h4><p>поддержка и вендоры хамят</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SLIDE 8: HYPOTHESES -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Гипотезы и вердикты</h2>
-      </div>
-      <div class="hypo-list">
-        <div class="hypo-item">
-          <div class="hypo-num">1</div>
-          <div class="hypo-content">
-            <h3>Аудитория взрослая и хардкорная, маркетинг должен это учитывать</h3>
-            <p>Для Антона: 1 — подтверждена</p>
-            <span class="verdict verdict-confirmed">Подтверждена</span>
+    <!-- SLIDE 2: MAIN INSIGHT -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Главный инсайт</h2>
           </div>
-        </div>
-        <div class="hypo-item">
-          <div class="hypo-num">2</div>
-          <div class="hypo-content">
-            <h3>Безопасность — ключ к конверсии не-покупателей.</h3>
-            <p>Для Антона: 2 — переформулирована</p>
-            <span class="verdict verdict-reformulated">Переформулирована</span>
-          </div>
-        </div>
-        <div class="hypo-item">
-          <div class="hypo-num">3</div>
-          <div class="hypo-content">
-            <h3>Спрос жёстко привязан к старту лиги, вне пика маркетинг неэффективен.</h3>
-            <p>Для Антона: 3 — подтверждена</p>
-            <span class="verdict verdict-confirmed">Подтверждена</span>
-          </div>
-        </div>
-        <div class="hypo-item">
-          <div class="hypo-num">4</div>
-          <div class="hypo-content">
-            <h3>Валюта доминирует над предметами и услугами.</h3>
-            <p>Для Антона: 4 — подтверждена с оговоркой (другой цвет галочки)</p>
-            <span class="verdict verdict-confirmed">Подтверждена</span>
-            <span class="verdict-note">с оговоркой</span>
+          <div class="insight-tags">
+            <div class="insight-tag"><span class="icon">🎮</span> hardcore</div>
+            <div class="insight-tag"><span class="icon">👤</span> adult</div>
+            <div class="insight-tag"><span class="icon">🔄</span> cyclical pattern</div>
+            <div class="insight-tag"><span class="icon">⚠️</span> fear of losing the account</div>
+            <div class="insight-tag"><span class="icon">💰</span> prefers currency</div>
+            <div class="insight-tag"><span class="icon">🌟</span> trusts KOLs</div>
           </div>
         </div>
       </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>2 / 15</span></div>
     </div>
-  </section>
 
-  <!-- SLIDE 9: CYCLE -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Цикличность игры и сценарии покупки</h2>
-      </div>
-      <div class="cycle-diagram">
-        <div class="cycle-wheel">
-          <div class="cycle-center">Цикл лиги PoE</div>
-          <div class="cycle-ring cycle-ring-1"></div>
-          <div class="cycle-ring cycle-ring-2"></div>
-          <div class="cycle-ring cycle-ring-3"></div>
-          <div class="cycle-node cycle-node-1"><span class="c-icon">🚀</span>Старт</div>
-          <div class="cycle-node cycle-node-2"><span class="c-icon">📈</span>Пик</div>
-          <div class="cycle-node cycle-node-3"><span class="c-icon">📉</span>Спад</div>
-          <div class="cycle-node cycle-node-4"><span class="c-icon">❄️</span>Межсезонье</div>
-        </div>
-        <div class="cycle-labels">
-          <div class="cycle-label-item"><div><div class="phase">Фаза 1 — Старт лиги</div><h4>Максимальный спрос</h4><p>Все скупают валюту для старта, максимальная активность на маркетплейсе</p></div></div>
-          <div class="cycle-label-item"><div><div class="phase">Фаза 2 — Пик (день 2–3)</div><h4>Второй всплеск</h4><p>Цены упали, пополняемся. Второй пик спроса на валюту</p></div></div>
-          <div class="cycle-label-item"><div><div class="phase">Фаза 3 — Спад</div><h4>Спрос падает</h4><p>Маркетинг неэффективен, активность снижается</p></div></div>
-          <div class="cycle-label-item"><div><div class="phase">Фаза 4 — Межсезонье</div><h4>Минимальная активность</h4><p>Ожидание следующей лиги, распродажа остатков</p></div></div>
+    <!-- SLIDE 3: FIELD RESEARCH -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Полевая разведка</h2>
+          </div>
+          <div class="research-grid">
+            <div class="research-card">
+              <h3>1. Составление опроса</h3>
+              <p>портрет игрока → опыт в PoE → отношение к RMT и маркетплейсам → боли и барьеры в игре → триггеры для покупки/продажи валюты → преференции по функционалу маркетплейса</p>
+            </div>
+            <div class="research-card">
+              <h3>2. Карта сообществ</h3>
+              <p>Discord серверы трейдеров (TFT; Eternal Trove) и крупных стримеров; сабреддиты по игре; группы в Facebook; группы маркетплейсов-конкурентов.</p>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>3 / 15</span></div>
     </div>
-  </section>
 
-  <!-- SLIDE 10: CURRENCY KING -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Валюта — король. Что это значит для продукта?</h2>
-      </div>
-      <div class="currency-grid">
-        <div class="currency-orbs">
-          <div class="orb-card"><span class="orb-icon">💎</span><div><h4>Divine Orb</h4><p>Основная валюта для торговли предметами высшего уровня</p></div></div>
-          <div class="orb-card"><span class="orb-icon">🔥</span><div><h4>Chaos Orb</h4><p>Базовая валюта для повседневных операций</p></div></div>
-        </div>
-        <div class="todo-box">
-          <h3>To do:</h3>
-          <ul class="todo-list">
-            <li>Главный экран — курсы Divine Orb/Chaos Orb. Остальное вынести в отдельные вкладки.</li>
-            <li>Escrow, страховка от бана (если реализуемо), импорт репутации</li>
-            <li>Онбординг для новичков</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SLIDE 11: VIRAL MECHANICS -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Виральная механика без Dev-ресурса</h2>
-      </div>
-      <div class="viral-diagram">
-        <div class="viral-hub"><div class="viral-hub-box">Starpets — Рост без привлечения Dev</div></div>
-        <div class="viral-branches">
-          <div class="viral-branch"><div class="v-icon">👥</div><h4>Присоединение к коммьюнити</h4><p>Discord, Twitch, Reddit — где тусуется аудитория</p></div>
-          <div class="viral-branch"><div class="v-icon">🎮</div><h4>Участие в активности</h4><p>Участие в ивенте — 1000 points. Геймификация</p></div>
-          <div class="viral-branch"><div class="v-icon">✍️</div><h4>UGC вовне</h4><p>User-generated content. Гайды и обзоры</p></div>
-          <div class="viral-branch"><div class="v-icon">👁️</div><h4>Привлечение внимания</h4><p>Инфлюенсеры, KOL, нативные интеграции</p></div>
-        </div>
-        <div class="viral-note"><strong>Для Антона:</strong> То же самое что делали в прошлой презе; заменить пузырь «совет слота» на «участие в ивенте» — 1000 points; заменить везде Ebaka на Starpets</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SLIDE 12: BRIEF PRODUCT -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Брифинг команд: продукт</h2>
-      </div>
-      <div class="brief-block">
-        <h3>📦 Продукт</h3>
-        <ul class="brief-tasks">
-          <li class="brief-task"><div class="brief-task-text"><strong>Прототип витрины валюты</strong> в формате валюта + курс — через неделю</div><span class="brief-task-time">1 неделя</span></li>
-          <li class="brief-task"><div class="brief-task-text"><strong>Развёрнутая схема Escrow</strong> в FAQ — через две недели</div><span class="brief-task-time">2 недели</span></li>
-          <li class="brief-task"><div class="brief-task-text"><strong>User story для онбординга</strong> новичков — через месяц</div><span class="brief-task-time">1 месяц</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- SLIDE 13: BRIEF MARKETING -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Брифинг команд: маркетинг и paid</h2>
-      </div>
-      <div class="brief-seg">
-        <h4>Креативы под сегменты</h4>
-        <div class="brief-seg-card"><p><strong>Три варианта креативов</strong> под разные сегменты («занятые взрослые игроки»; «гонщики-хардкорщики»; «средние игроки, копирующие билды у KOL») — к началу следующей лиги</p></div>
-        <div class="brief-seg-card"><p><strong>Настройка ретаргетинга</strong> на посетителей PoE-ресурсов — к началу следующей лиги</p></div>
-        <div class="brief-seg-card"><p><strong>Ресерч по запуску баннеров</strong> на Poe Ninja/PoE Wiki и подобных ресурсах (возможно или нет? толерантны ли к RMT?) — в течение двух недель</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SLIDE 14: BRIEF INFLUENCE + CRM -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Брифинг команд: Influence и CRM</h2>
-      </div>
-      <div class="influence-crm-grid">
-        <div class="ic-card">
-          <h3>🎯 Influence</h3>
-          <ul class="ic-list">
-            <li><strong>Договориться с 2–3 стримерами-гайдоделами</strong> о нативных интеграциях — в течение пары недель, пока лига еще живая</li>
-            <li><strong>Подготовить скрипты</strong> для интеграций — на этой неделе</li>
-            <li><strong>Подготовить аффилиэйт ссылки</strong> — на этой неделе</li>
-          </ul>
-        </div>
-        <div class="ic-card">
-          <h3>📊 CRM</h3>
-          <ul class="ic-list">
-            <li><strong>Подготовить триггерные цепочки</strong> для активации — за неделю до старта лиги</li>
-          </ul>
-          <ul class="ic-list ic-sub">
-            <li>— За 3 дня до лиги — «стартовый капитал»</li>
-            <li>— День 2–3 — «цены упали, пополняемся»</li>
-            <li>— Через 7 дней неактивности после посещения</li>
-          </ul>
-          <ul class="ic-list ic-sub">
-            <li><strong>Сегментировать базу</strong> (новички/покупатели/продавцы) — после 100 сделок в сегменте PoE</li>
-          </ul>
+    <!-- SLIDE 4: RESEARCHER INSIGHTS -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Инсайты для ресерчера</h2>
+          </div>
+          <div class="insight-row">
+            <div class="insight-num">1</div>
+            <div class="insight-text">Запрос на размещение — бан, игнор или негатив</div>
+          </div>
+          <div class="insight-row">
+            <div class="insight-num">2</div>
+            <div class="insight-text">Пост без запроса — больше конверсия, но также больше банов</div>
+          </div>
+          <div class="conclusions-box">
+            <h4>Выводы</h4>
+            <ol>
+              <li>Обещание награды за прохождение не всегда мотивирует, а иногда и наоборот</li>
+              <li>Размещение ссылок — красная тряпка</li>
+              <li>Нужно закладывать больший срок на исследование</li>
+              <li>Если продукт под NDA — нужно потестить маскировку. Если называем продукт — конверсия в аппрув будет выше</li>
+            </ol>
+          </div>
         </div>
       </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>4 / 15</span></div>
     </div>
-  </section>
 
-  <!-- SLIDE 15: OPEN QUESTIONS -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Открытые вопросы и риски</h2>
+    <!-- SLIDE 5: AUDIENCE -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Кто наша аудитория</h2>
+          </div>
+          <div class="audience-grid">
+            <div class="audience-card">
+              <div class="audience-num">23–32</div>
+              <h3>Возраст</h3>
+              <p>Возраст — 23-32 года</p>
+            </div>
+            <div class="audience-card">
+              <div class="audience-num">HC</div>
+              <h3>Hardcore / Semi-hardcore</h3>
+              <p>Hardcore/semi-hardcore игроки с сотнями часов в игре</p>
+            </div>
+            <div class="audience-card">
+              <div class="audience-num">PoE1+2</div>
+              <h3>Ветераны</h3>
+              <p>Ветераны играют и в PoE1 и в PoE2. Новички пропускают первую часть</p>
+            </div>
+            <div class="audience-card">
+              <div class="audience-num">🧠</div>
+              <h3>Взрослый вайб</h3>
+              <p>Взрослый вайб сообщества, более осознанные решения</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="questions-grid">
-        <div class="question-card"><div class="q-icon">?</div><p><strong>Можно ли конвертировать принципиальных противников</strong> вроде Кори без официального партнёрства с GGG? Нужен тест с усиленным социальным доказательством.</p></div>
-        <div class="question-card"><div class="q-icon">?</div><p><strong>Каков реальный LTV</strong> покупателя и продавца? Требуются когортные данные.</p></div>
-        <div class="question-card"><div class="q-icon">?</div><p><strong>Как массово переманить продавцов с G2G и FunPay?</strong> Гипотеза: перенос репутации + временная нулевая комиссия.</p></div>
-        <div class="question-card"><div class="q-icon">?</div><p><strong>Готовы ли топ-стримеры</strong> открыто рекламировать RMT-сервис? Нужен пилот с лояльными инфлюенсерами.</p></div>
-      </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>5 / 15</span></div>
     </div>
-  </section>
 
-  <footer>
-    <div class="container">
-      <div class="logo">Starpets</div>
-      <p>Marketplace валюты для Path of Exile</p>
+    <!-- SLIDE 6: PAIN DIAGRAM -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Главные боли и барьеры</h2>
+          </div>
+          <div class="pain-diagram">
+            <div class="pain-center">Главный барьер:<br>страх потерять аккаунт</div>
+            <div class="pain-spokes">
+              <div class="pain-spoke"><span class="pain-spoke-icon">🚫</span><div><h4>Lack of trust against the rules</h4><p>leads to a ban</p></div></div>
+              <div class="pain-spoke"><span class="pain-spoke-icon">😰</span><div><h4>Afraid of getting scammed</h4><p>страх обмана</p></div></div>
+              <div class="pain-spoke"><span class="pain-spoke-icon">⏳</span><div><h4>A long withdrawal</h4><p>долгий вывод средств</p></div></div>
+              <div class="pain-spoke"><span class="pain-spoke-icon">🔗</span><div><h4>P2P is fishy</h4><p>P2P воспринимается как подозрительное</p></div></div>
+              <div class="pain-spoke"><span class="pain-spoke-icon">💸</span><div><h4>High commissions</h4><p>высокие комиссии</p></div></div>
+              <div class="pain-spoke"><span class="pain-spoke-icon">😤</span><div><h4>Support is cringe</h4><p>rude vendors, хамская поддержка</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>6 / 15</span></div>
     </div>
-  </footer>
+
+    <!-- SLIDE 7: PAIN DIAGRAM 2 -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Главные боли и барьеры</h2>
+          </div>
+          <div class="pain-diagram">
+            <div class="pain-center" style="width:260px;height:260px;">P2P is fishy — P2P воспринимается как подозрительное</div>
+            <div class="pain-periphery">
+              <div class="pain-periph-item"><div class="icon">🚫</div><h4>Lack of trust</h4><p>against the rules, leads to a ban</p></div>
+              <div class="pain-periph-item"><div class="icon">😰</div><h4>Afraid of scam</h4><p>страх быть обманутым</p></div>
+              <div class="pain-periph-item"><div class="icon">⏳</div><h4>Long withdrawal</h4><p>долгий вывод средств</p></div>
+              <div class="pain-periph-item"><div class="icon">💸</div><h4>High commissions</h4><p>высокие комиссии</p></div>
+              <div class="pain-periph-item"><div class="icon">😤</div><h4>Support is cringe</h4><p>rude vendors</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>7 / 15</span></div>
+    </div>
+
+    <!-- SLIDE 8: PAIN POINTS 3 -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Главные боли и барьеры</h2>
+          </div>
+          <div class="pains-horizontal" style="margin-top:16px;">
+            <div class="pain-h-item"><div class="label">fear</div><div><h4>lack of trust against the rules, leads to a ban</h4><p>страх нарушить правила и получить бан</p></div></div>
+            <div class="pain-h-item"><div class="label">fear</div><div><h4>afraid of getting scammed</h4><p>страх быть обманутым</p></div></div>
+            <div class="pain-h-item"><div class="label">time</div><div><h4>a long withdrawal</h4><p>долгий вывод средств</p></div></div>
+            <div class="pain-h-item"><div class="label">trust</div><div><h4>p2p is fishy</h4><p>P2P воспринимается как подозрительное</p></div></div>
+            <div class="pain-h-item"><div class="label">cost</div><div><h4>high commissions</h4><p>высокие комиссии платформы</p></div></div>
+            <div class="pain-h-item"><div class="label">support</div><div><h4>support is cringe, rude vendors</h4><p>поддержка и вендоры хамят</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>8 / 15</span></div>
+    </div>
+
+    <!-- SLIDE 9: HYPOTHESES -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Гипотезы и вердикты</h2>
+          </div>
+          <div class="hypo-list" style="margin-top:12px;">
+            <div class="hypo-item">
+              <div class="hypo-num">1</div>
+              <div class="hypo-content">
+                <h3>Аудитория взрослая и хардкорная, маркетинг должен это учитывать</h3>
+                <p>Для Антона: 1 — подтверждена</p>
+                <span class="verdict verdict-confirmed">Подтверждена</span>
+              </div>
+            </div>
+            <div class="hypo-item">
+              <div class="hypo-num">2</div>
+              <div class="hypo-content">
+                <h3>Безопасность — ключ к конверсии не-покупателей.</h3>
+                <p>Для Антона: 2 — переформулирована</p>
+                <span class="verdict verdict-reformulated">Переформулирована</span>
+              </div>
+            </div>
+            <div class="hypo-item">
+              <div class="hypo-num">3</div>
+              <div class="hypo-content">
+                <h3>Спрос жёстко привязан к старту лиги, вне пика маркетинг неэффективен.</h3>
+                <p>Для Антона: 3 — подтверждена</p>
+                <span class="verdict verdict-confirmed">Подтверждена</span>
+              </div>
+            </div>
+            <div class="hypo-item">
+              <div class="hypo-num">4</div>
+              <div class="hypo-content">
+                <h3>Валюта доминирует над предметами и услугами.</h3>
+                <p>Для Антона: 4 — подтверждена с оговоркой</p>
+                <span class="verdict verdict-confirmed">Подтверждена</span>
+                <span class="verdict-note">с оговоркой</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>9 / 15</span></div>
+    </div>
+
+    <!-- SLIDE 10: CYCLE -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Цикличность игры и сценарии покупки</h2>
+          </div>
+          <div class="cycle-diagram">
+            <div class="cycle-wheel">
+              <div class="cycle-center">Цикл лиги PoE</div>
+              <div class="cycle-ring cycle-ring-1"></div>
+              <div class="cycle-ring cycle-ring-2"></div>
+              <div class="cycle-ring cycle-ring-3"></div>
+              <div class="cycle-node cycle-node-1"><span class="c-icon">🚀</span>Старт</div>
+              <div class="cycle-node cycle-node-2"><span class="c-icon">📈</span>Пик</div>
+              <div class="cycle-node cycle-node-3"><span class="c-icon">📉</span>Спад</div>
+              <div class="cycle-node cycle-node-4"><span class="c-icon">❄️</span>Межсезонье</div>
+            </div>
+            <div class="cycle-labels">
+              <div class="cycle-label-item"><div><div class="phase">Фаза 1 — Старт лиги</div><h4>Максимальный спрос</h4><p>Все скупают валюту для старта, максимальная активность на маркетплейсе</p></div></div>
+              <div class="cycle-label-item"><div><div class="phase">Фаза 2 — Пик (день 2–3)</div><h4>Второй всплеск</h4><p>Цены упали, пополняемся. Второй пик спроса на валюту</p></div></div>
+              <div class="cycle-label-item"><div><div class="phase">Фаза 3 — Спад</div><h4>Спрос падает</h4><p>Маркетинг неэффективен, активность снижается</p></div></div>
+              <div class="cycle-label-item"><div><div class="phase">Фаза 4 — Межсезонье</div><h4>Минимальная активность</h4><p>Ожидание следующей лиги, распродажа остатков</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>10 / 15</span></div>
+    </div>
+
+    <!-- SLIDE 11: CURRENCY KING -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Валюта — король</h2>
+          </div>
+          <div class="currency-grid">
+            <div class="currency-orbs">
+              <div class="orb-card"><span class="orb-icon">💎</span><div><h4>Divine Orb</h4><p>Основная валюта для торговли предметами высшего уровня</p></div></div>
+              <div class="orb-card"><span class="orb-icon">🔥</span><div><h4>Chaos Orb</h4><p>Базовая валюта для повседневных операций</p></div></div>
+            </div>
+            <div class="todo-box">
+              <h3>To do:</h3>
+              <ul class="todo-list">
+                <li>Главный экран — курсы Divine Orb/Chaos Orb. Остальное вынести в отдельные вкладки.</li>
+                <li>Escrow, страховка от бана (если реализуемо), импорт репутации</li>
+                <li>Онбординг для новичков</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>11 / 15</span></div>
+    </div>
+
+    <!-- SLIDE 12: VIRAL MECHANICS -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Виральная механика без Dev-ресурса</h2>
+          </div>
+          <div class="viral-diagram">
+            <div class="viral-hub"><div class="viral-hub-box">Starpets — Рост без привлечения Dev</div></div>
+            <div class="viral-branches">
+              <div class="viral-branch"><div class="v-icon">👥</div><h4>Присоединение к коммьюнити</h4><p>Discord, Twitch, Reddit</p></div>
+              <div class="viral-branch"><div class="v-icon">🎮</div><h4>Участие в активности</h4><p>Ивент — 1000 points</p></div>
+              <div class="viral-branch"><div class="v-icon">✍️</div><h4>UGC вовне</h4><p>Гайды и обзоры</p></div>
+              <div class="viral-branch"><div class="v-icon">👁️</div><h4>Привлечение внимания</h4><p>Инфлюенсеры, KOL</p></div>
+            </div>
+            <div class="viral-note"><strong>Для Антона:</strong> Заменить пузырь «совет слота» на «участие в ивенте» — 1000 points; заменить Ebaka на Starpets</div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>12 / 15</span></div>
+    </div>
+
+    <!-- SLIDE 13: BRIEF PRODUCT -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Брифинг команд: продукт</h2>
+          </div>
+          <div class="brief-block">
+            <h3>📦 Продукт</h3>
+            <ul class="brief-tasks">
+              <li class="brief-task"><div class="brief-task-text"><strong>Прототип витрины валюты</strong> в формате валюта + курс — через неделю</div><span class="brief-task-time">1 неделя</span></li>
+              <li class="brief-task"><div class="brief-task-text"><strong>Развёрнутая схема Escrow</strong> в FAQ — через две недели</div><span class="brief-task-time">2 недели</span></li>
+              <li class="brief-task"><div class="brief-task-text"><strong>User story для онбординга</strong> новичков — через месяц</div><span class="brief-task-time">1 месяц</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>13 / 15</span></div>
+    </div>
+
+    <!-- SLIDE 14: BRIEF MARKETING + INFLUENCE + CRM -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Брифинг команд: маркетинг и Influence + CRM</h2>
+          </div>
+          <div class="influence-crm-grid">
+            <div class="ic-card">
+              <h3>🎯 Influence + Маркетинг</h3>
+              <ul class="ic-list">
+                <li><strong>Креативы под сегменты</strong> — к началу следующей лиги</li>
+                <li><strong>Ретаргетинг</strong> на посетителей PoE-ресурсов</li>
+                <li><strong>Баннеры на Poe Ninja/Wiki</strong> — исследовать толерантность к RMT</li>
+                <li><strong>2–3 стримера-гайдодела</strong> для нативных интеграций</li>
+                <li><strong>Триггерные цепочки CRM:</strong> за 3 дня до лиги, день 2–3, через 7 дней неактивности</li>
+              </ul>
+            </div>
+            <div class="ic-card">
+              <h3>📊 CRM + Paid</h3>
+              <ul class="ic-list">
+                <li><strong>Сегментация базы:</strong> новички / покупатели / продавцы — после 100 сделок в PoE</li>
+                <li><strong>Перенос репутации</strong> с G2G/FunPay + нулевая комиссия</li>
+                <li><strong>Аффилиэйт ссылки</strong> — на этой неделе</li>
+                <li><strong>Пилот с лояльными инфлюенсерами</strong> — открытая реклама RMT</li>
+              </ul>
+              <ul class="ic-list ic-sub">
+                <li>— За 3 дня до лиги — «стартовый капитал»</li>
+                <li>— День 2–3 — «цены упали, пополняемся»</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>14 / 15</span></div>
+    </div>
+
+    <!-- SLIDE 15: OPEN QUESTIONS -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="section-header">
+            <h2 class="section-title">Открытые вопросы и риски</h2>
+          </div>
+          <div class="questions-grid" style="margin-top:16px;">
+            <div class="question-card"><div class="q-icon">?</div><p><strong>Можно ли конвертировать принципиальных противников</strong> вроде Кори без официального партнёрства с GGG?</p></div>
+            <div class="question-card"><div class="q-icon">?</div><p><strong>Каков реальный LTV</strong> покупателя и продавца? Требуются когортные данные.</p></div>
+            <div class="question-card"><div class="q-icon">?</div><p><strong>Как массово переманить продавцов с G2G и FunPay?</strong> Гипотеза: перенос репутации + нулевая комиссия.</p></div>
+            <div class="question-card"><div class="q-icon">?</div><p><strong>Готовы ли топ-стримеры</strong> открыто рекламировать RMT-сервис? Нужен пилот.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer"><span class="logo">Starpets</span><span>15 / 15</span></div>
+    </div>
+
+  </div><!-- end slides-wrapper -->
 
 </body>
 </html>
