@@ -16,7 +16,7 @@
       --text-primary: #1D1D1F;
       --text-secondary: #86868B;
       --text-inverse: #F5F5F7;
-      --accent: #0071E3;
+      --accent: #fe9920;
       --border: #D2D2D7;
       --card-bg: #FFFFFF;
       --radius: 18px;
@@ -24,6 +24,7 @@
       --red: #FF3B30;
       --green: #30D158;
       --orange: #FF9F0A;
+      --accent-orange: #fe9920;
     }
     html { scroll-behavior: smooth; }
     body {
@@ -111,7 +112,7 @@
     .section-header { margin-bottom: 20px; }
     .badge { display: inline-block; padding: 8px 20px; border-radius: 999px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-right: 12px; margin-bottom: 24px; }
     .badge-primary { background: var(--bg-secondary); color: var(--text-primary); }
-    .badge-secondary { background: rgba(0, 113, 227, 0.1); color: var(--accent); }
+    .badge-secondary { background: rgba(254, 153, 32, 0.12); color: var(--accent); }
     .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .card-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .card { background: var(--card-bg); border-radius: var(--radius); padding: 32px; border: 1px solid var(--border); transition: transform 0.3s, box-shadow 0.3s; }
@@ -231,7 +232,7 @@
     .hypo-num { width: 36px; height: 36px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; flex-shrink: 0; color: #fff; }
     .hypo-content h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
     .hypo-content p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
-    .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .research-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
     .research-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: transform 0.3s, box-shadow 0.3s; }
     .research-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); }
     .research-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.01em; }
