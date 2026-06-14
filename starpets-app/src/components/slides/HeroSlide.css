@@ -62,3 +62,24 @@
   margin: 0;
   letter-spacing: 0.01em;
 }
+
+@media print {
+  .hero-title {
+    font-size: 96px;
+    line-height: 0.95;
+  }
+  .hero-subtitle {
+    font-size: 22px;
+  }
+  .hero-desc {
+    font-size: 15px;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    padding: 6px 14px;
+    margin-bottom: 8px;
+  }
+  .hero-content {
+    gap: 12px;
+  }
+}

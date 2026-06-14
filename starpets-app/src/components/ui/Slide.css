@@ -1,9 +1,7 @@
 .slide {
   width: 100%;
-  max-width: 1120px;
   aspect-ratio: 297 / 210;
   background: var(--bg-primary);
-  border-radius: 4px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -118,22 +116,35 @@
     size: A4 landscape;
     margin: 0;
   }
+  html,
   body {
+    margin: 0 !important;
+    padding: 0 !important;
     background: #fff;
   }
   .slides-wrapper {
     padding: 0;
     gap: 0;
+    align-items: stretch;
+    width: 297mm;
+    min-height: 0;
   }
   .slide {
-    width: 297mm;
-    height: 210mm;
-    max-width: 297mm;
-    max-height: 210mm;
+    width: 295mm;
+    height: 209mm;
+    max-width: 295mm;
+    max-height: 209mm;
+    margin: 0.5mm auto;
     box-shadow: none;
     border-radius: 0;
     page-break-after: always;
     page-break-inside: avoid;
+    break-after: page;
+    break-inside: avoid;
+  }
+  .slide:last-child {
+    page-break-after: auto;
+    break-after: auto;
   }
   .slide-inner,
   .slide-content,

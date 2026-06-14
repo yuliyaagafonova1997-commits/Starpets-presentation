@@ -6,6 +6,21 @@
   position: relative;
 }
 
+.insight-face-bg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  object-fit: contain;
+}
+
 .insight-center {
   position: relative;
   width: 320px;
@@ -113,33 +128,37 @@
 }
 
 .insight-block-1 {
-  top: -10px;
+  top: -12.5%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .insight-block-2 {
-  top: 60px;
-  right: -20px;
+  top: 18.75%;
+  left: 104.125%;
+  transform: translate(-50%, -50%);
 }
 
 .insight-block-3 {
-  bottom: 60px;
-  right: -20px;
+  top: 81.25%;
+  left: 104.125%;
+  transform: translate(-50%, -50%);
 }
 
 .insight-block-4 {
-  bottom: -10px;
+  top: 112.5%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .insight-block-5 {
-  bottom: 60px;
-  left: -20px;
+  top: 81.25%;
+  left: -4.125%;
+  transform: translate(-50%, -50%);
 }
 
 .insight-block-6 {
-  top: 60px;
-  left: -20px;
+  top: 18.75%;
+  left: -4.125%;
+  transform: translate(-50%, -50%);
 }

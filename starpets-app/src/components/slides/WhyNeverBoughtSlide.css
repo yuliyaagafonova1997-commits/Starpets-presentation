@@ -1,7 +1,7 @@
 .never-bought-layout {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 40px;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
   align-items: center;
   flex: 1;
   min-height: 0;
@@ -10,30 +10,63 @@
 .never-bought-chart {
   background: var(--card-bg);
   border-radius: var(--radius);
-  padding: 28px;
+  padding: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.never-bought-chart .pie-chart {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.never-bought-chart .pie-legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 4px;
+  width: 100%;
+}
+
+.never-bought-chart .pie-legend li {
+  font-size: 10px;
+  gap: 6px;
+}
+
+.never-bought-chart .pie-legend-swatch {
+  width: 8px;
+  height: 8px;
+}
+
+.never-bought-chart .pie-center-label {
+  font-size: 22px;
+}
+
+.never-bought-chart .pie-center-sublabel {
+  font-size: 9px;
+  margin-top: 2px;
+}
+
 .never-bought-takeaways {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
+  min-width: 0;
 }
 
 .takeaway {
   display: grid;
-  grid-template-columns: 110px 1fr;
+  grid-template-columns: 78px 1fr;
   align-items: center;
-  gap: 18px;
-  padding: 18px 22px;
+  gap: 14px;
+  padding: 10px 14px;
   background: var(--card-bg);
   border-radius: var(--radius);
 }
 
 .takeaway-num {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--text-secondary);
@@ -46,8 +79,8 @@
 }
 
 .takeaway-text {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.4;
   color: var(--text-primary);
 }
 
@@ -58,12 +91,12 @@
 .takeaway-product {
   background: linear-gradient(135deg, #1d1d1f 0%, #2a2a35 100%);
   grid-template-columns: 1fr;
-  gap: 6px;
-  padding: 18px 22px;
+  gap: 4px;
+  padding: 12px 16px;
 }
 
 .takeaway-product .takeaway-label {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -71,7 +104,7 @@
 }
 
 .takeaway-product .takeaway-text {
-  font-size: 14px;
+  font-size: 12px;
   color: #f5f5f7;
-  line-height: 1.5;
+  line-height: 1.4;
 }
