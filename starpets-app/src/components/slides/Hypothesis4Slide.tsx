@@ -1,8 +1,8 @@
-import { Slide } from '../ui/Slide';
-import { ComparisonCard } from '../charts/ComparisonCard';
-import { chartColors } from '../charts/chartColors';
-import { CheckIcon } from '../icons';
-import './VerdictSlide.css';
+import { ComparisonCard } from '../charts/ComparisonCard'
+import { chartColors } from '../charts/chartColors'
+import { CheckIcon } from '../icons'
+import { Slide } from '../ui/Slide'
+import './VerdictSlide.css'
 
 export function Hypothesis4Slide() {
   return (
@@ -10,10 +10,12 @@ export function Hypothesis4Slide() {
       <div className="hypo-slide">
         <div className="hypo-left">
           <div className="hypo-num">Гипотеза №4</div>
-          <h2 className="hypo-headline">Валюта доминирует над&nbsp;предметами и&nbsp;услугами</h2>
+          <h2 className="hypo-headline">
+            Валюта доминирует над&nbsp;предметами и&nbsp;услугами
+          </h2>
           <p className="hypo-body">
-            69% покупают валюту, 72% продают. Items и&nbsp;services&nbsp;— вторичны. Главный
-            экран маркетплейса&nbsp;— курсы Divine/Chaos
+            69% покупают валюту, 72% продают. Items и&nbsp;services&nbsp;—
+            вторичны. Главный экран маркетплейса&nbsp;— курсы Divine/Chaos
           </p>
           <span className="hypo-verdict hypo-verdict-confirmed">
             <CheckIcon size={14} color={chartColors.green} />
@@ -25,31 +27,60 @@ export function Hypothesis4Slide() {
             left={{
               title: 'Покупают',
               items: [
-                { label: 'Currency (Divine/Chaos)', value: '69%', color: chartColors.orange },
-                { label: 'Services (leveling)', value: '22%', color: chartColors.gray },
-                { label: 'Items (Headhunter)', value: '8%', color: chartColors.gray },
+                {
+                  label: 'Валюта (Divine/Chaos)',
+                  value: '69%',
+                  color: chartColors.orange,
+                },
+                {
+                  label: 'Услуги (прокачка)',
+                  value: '22%',
+                  color: chartColors.gray,
+                },
+                {
+                  label: 'Предметы (Headhunter)',
+                  value: '8%',
+                  color: chartColors.gray,
+                },
               ],
-              caption: 'N = 36, single choice',
+              //caption: 'N = 36, single choice',
             }}
             right={{
               title: 'Продают',
               items: [
-                { label: 'Currency (Divine/Chaos)', value: '72%', color: chartColors.orange },
-                { label: 'Services (leveling)', value: '17%', color: chartColors.gray },
-                { label: 'Items (Headhunter)', value: '11%', color: chartColors.gray },
+                {
+                  label: 'Валюта (Divine/Chaos)',
+                  value: '72%',
+                  color: chartColors.orange,
+                },
+                {
+                  label: 'Услуги (прокачка)',
+                  value: '17%',
+                  color: chartColors.gray,
+                },
+                {
+                  label: 'Предметы (Headhunter)',
+                  value: '11%',
+                  color: chartColors.gray,
+                },
               ],
-              caption: 'N = 36, single choice',
+              //caption: 'N = 36, single choice',
             }}
             divider="↔"
           />
-          <div className="hypo-evidence" style={{ background: 'rgba(254, 153, 32, 0.1)' }}>
+          <div
+            className="hypo-evidence"
+            style={{ background: 'rgba(254, 153, 32, 0.1)' }}
+          >
             <h4 style={{ color: chartColors.orange }}>Оговорка</h4>
             <ul>
               <li>
-                Selling currency = supply, buying currency = demand. Аудитория пересекается, но&nbsp;не&nbsp;1:1
+                Selling currency = supply, buying currency = demand. Аудитория
+                пересекается, но&nbsp;не&nbsp;1:1
               </li>
               <li>
-                Часть покупателей&nbsp;— исключительно покупатели (нет своего фарма)
+                Часть покупателей&nbsp;— исключительно покупатели (нет своего
+                фарма)
               </li>
             </ul>
           </div>
@@ -57,5 +88,5 @@ export function Hypothesis4Slide() {
         </div>
       </div>
     </Slide>
-  );
+  )
 }

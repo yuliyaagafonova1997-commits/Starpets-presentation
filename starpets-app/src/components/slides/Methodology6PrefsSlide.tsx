@@ -5,12 +5,12 @@ import { ShieldCheckIcon, StarIcon, MoneyIcon } from '../icons';
 import './ThesisSlide.css';
 
 const prefsData = [
-  { label: 'Marketplace reputation', value: 75, count: 27, color: chartColors.orange, highlight: true },
-  { label: 'Price and value', value: 72.2, count: 26, color: chartColors.orange, highlight: true },
-  { label: "Clear seller's history", value: 66.7, count: 24, color: chartColors.gray },
-  { label: 'Payment security', value: 55.6, count: 20, color: chartColors.gray },
-  { label: 'Delivery speed', value: 52.8, count: 19, color: chartColors.gray },
-  { label: 'Account safety', value: 44.4, count: 16, color: chartColors.gray },
+  { label: 'Репутация площадки', value: 75, count: 27, color: chartColors.orange, highlight: true },
+  { label: 'Цена и выгода', value: 72.2, count: 26, color: chartColors.orange, highlight: true },
+  { label: 'История сделок', value: 66.7, count: 24, color: chartColors.gray },
+  { label: 'Безопасность оплаты', value: 55.6, count: 20, color: chartColors.gray },
+  { label: 'Скорость доставки', value: 52.8, count: 19, color: chartColors.gray },
+  { label: 'Безопасность аккаунта', value: 44.4, count: 16, color: chartColors.gray },
 ];
 
 export function Methodology6PrefsSlide() {
@@ -56,7 +56,6 @@ export function Methodology6PrefsSlide() {
           </div>
         </div>
       </div>
-      <span className="data-source">N&nbsp;=&nbsp;36 · Опрос PoE-аудитории, 2025 · multi-select</span>
     </Slide>
   );
 }

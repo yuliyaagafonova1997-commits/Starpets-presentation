@@ -54,7 +54,6 @@ export function CommunityMapSlide() {
           );
         })}
       </div>
-      <span className="data-source">N&nbsp;=&nbsp;36 · Опрос PoE-аудитории, 2025</span>
     </Slide>
   );
 }

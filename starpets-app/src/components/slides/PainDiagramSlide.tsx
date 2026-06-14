@@ -10,7 +10,7 @@ const topPains = [
     icon: BanIcon,
     color: chartColors.red,
     pct: '27.6%',
-    title: 'Fear of getting account banned',
+    title: 'Страх бана аккаунта',
     sub: 'Fear of losing the account — главный барьер, страх нарушить правила PoE',
     count: 8,
   },
@@ -18,7 +18,7 @@ const topPains = [
     icon: ScaredIcon,
     color: chartColors.orange,
     pct: '27.6%',
-    title: 'Prefer to earn in-game',
+    title: 'Хочу заработать сам',
     sub: 'Предпочитают фармить сами — это не наш сегмент, но и не мешают остальным',
     count: 8,
   },
@@ -26,17 +26,17 @@ const topPains = [
     icon: MoneyIcon,
     color: chartColors.blue,
     pct: '17.2%',
-    title: 'Risk of scams',
+    title: 'Риск скама',
     sub: 'Страх обмана — решается escrow и прозрачной историей сделок',
     count: 5,
   },
 ];
 
 const other = [
-  { icon: LinkIcon, label: 'P2P is fishy', pct: '10.3%' },
-  { icon: ScaredIcon, label: 'Long withdrawal', pct: '6.9%' },
-  { icon: MoneyIcon, label: 'High commissions', pct: '6.9%' },
-  { icon: BanIcon, label: 'Support is cringe', pct: '3.5%' },
+  { icon: LinkIcon, label: 'P2P подозрительно', pct: '10.3%' },
+  { icon: ScaredIcon, label: 'Долгий вывод', pct: '6.9%' },
+  { icon: MoneyIcon, label: 'Высокие комиссии', pct: '6.9%' },
+  { icon: BanIcon, label: 'Поддержка — боль', pct: '3.5%' },
 ];
 
 export function PainDiagramSlide() {
@@ -84,7 +84,6 @@ export function PainDiagramSlide() {
           })}
         </div>
       </div>
-      <span className="data-source">N&nbsp;=&nbsp;29 · Опрос PoE-аудитории, 2025</span>
     </Slide>
   );
 }

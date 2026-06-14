@@ -1,7 +1,7 @@
 .currency-charts {
   display: grid;
   grid-template-columns: 1fr 1fr 1.2fr;
-  gap: 18px;
+  gap: 14px;
   flex: 1;
   min-height: 0;
 }
@@ -9,27 +9,55 @@
 .currency-chart-card {
   background: var(--card-bg);
   border-radius: var(--radius);
-  padding: 22px 24px;
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 }
 
 .currency-chart-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-secondary);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+}
+
+.currency-chart-card .pie-chart {
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.currency-chart-card .pie-legend {
+  column-gap: 10px;
+  row-gap: 3px;
+  justify-content: center;
+}
+
+.currency-chart-card .pie-legend li {
+  font-size: 10px;
+  gap: 5px;
+}
+
+.currency-chart-card .pie-center-label {
+  font-size: 18px;
+}
+
+.currency-chart-card .pie-center-sublabel {
+  font-size: 9px;
+  margin-top: 2px;
 }
 
 .currency-todo {
   background: linear-gradient(135deg, #1d1d1f 0%, #2a2a35 100%);
   border-radius: var(--radius);
-  padding: 24px 28px;
+  padding: 18px 20px;
   display: flex;
   flex-direction: column;
   color: #f5f5f7;
+  min-height: 0;
 }
 
 .currency-todo-label {

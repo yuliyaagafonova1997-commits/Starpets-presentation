@@ -9,14 +9,14 @@ const ageData = [
   { label: '18–23', value: 4, color: chartColors.gray },
   { label: '32–36', value: 4, color: chartColors.blue },
   { label: '40+', value: 2, color: chartColors.green },
-  { label: 'Under 18', value: 1, color: chartColors.purple },
+  { label: 'До 18', value: 1, color: chartColors.purple },
   { label: '36–40', value: 1, color: chartColors.red },
 ];
 
 const gamerData = [
-  { label: 'Average gamer', value: 16, color: chartColors.orange },
-  { label: 'Hardcore gamer', value: 14, color: chartColors.black },
-  { label: 'Casual gamer', value: 6, color: chartColors.lightGray },
+  { label: 'Средний игрок', value: 16, color: chartColors.orange },
+  { label: 'Хардкор-игрок', value: 14, color: chartColors.black },
+  { label: 'Казуальный игрок', value: 6, color: chartColors.lightGray },
 ];
 
 export function AudienceSlide() {
@@ -78,7 +78,6 @@ export function AudienceSlide() {
           </ul>
         </div>
       </div>
-      <span className="data-source">N&nbsp;=&nbsp;36 · Опрос PoE-аудитории, 2025</span>
     </Slide>
   );
 }

@@ -10,7 +10,7 @@ const ageData = [
   { label: '18–23', value: 4, color: chartColors.gray },
   { label: '32–36', value: 4, color: chartColors.blue },
   { label: '40+', value: 2, color: chartColors.green },
-  { label: 'Under 18', value: 1, color: chartColors.purple },
+  { label: 'До 18', value: 1, color: chartColors.purple },
   { label: '36–40', value: 1, color: chartColors.red },
 ];
 
@@ -63,7 +63,6 @@ export function Methodology1PlayerSlide() {
           </div>
         </div>
       </div>
-      <span className="data-source">N&nbsp;=&nbsp;36 · Опрос PoE-аудитории, 2025</span>
     </Slide>
   );
 }

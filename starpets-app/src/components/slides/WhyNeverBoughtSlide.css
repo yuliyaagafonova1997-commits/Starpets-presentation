@@ -22,21 +22,13 @@
 }
 
 .never-bought-chart .pie-legend {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   column-gap: 10px;
-  row-gap: 4px;
-  width: 100%;
+  row-gap: 3px;
 }
 
 .never-bought-chart .pie-legend li {
   font-size: 10px;
-  gap: 6px;
-}
-
-.never-bought-chart .pie-legend-swatch {
-  width: 8px;
-  height: 8px;
+  gap: 5px;
 }
 
 .never-bought-chart .pie-center-label {

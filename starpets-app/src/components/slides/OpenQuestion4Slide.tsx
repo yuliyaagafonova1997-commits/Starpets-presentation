@@ -28,8 +28,8 @@ export function OpenQuestion4Slide() {
             left={{
               title: 'Закрытая реклама',
               items: [
-                { label: 'Brand safety', value: '~95%', color: chartColors.green },
-                { label: 'Reach', value: '~30%', color: chartColors.orange },
+                { label: 'Безопасность бренда', value: '~95%', color: chartColors.green },
+                { label: 'Охват', value: '~30%', color: chartColors.orange },
                 { label: 'Реакция аудитории', value: 'Нейтральная', color: chartColors.gray },
               ],
               caption: 'Стример не называет продукт прямо',
@@ -37,8 +37,8 @@ export function OpenQuestion4Slide() {
             right={{
               title: 'Открытая реклама',
               items: [
-                { label: 'Brand safety', value: '~50%', color: chartColors.red },
-                { label: 'Reach', value: '~90%', color: chartColors.green },
+                { label: 'Безопасность бренда', value: '~50%', color: chartColors.red },
+                { label: 'Охват', value: '~90%', color: chartColors.green },
                 { label: 'Реакция аудитории', value: 'Риск токсичности', color: chartColors.red },
               ],
               caption: 'Стример открыто называет маркетплейс',

@@ -10,12 +10,12 @@ import { Slide } from '../ui/Slide'
 import './MainInsightSlide.css'
 
 const insights = [
-  { icon: GamepadHardcoreIcon, label: 'Hardcore' },
-  { icon: PersonIcon, label: 'Adult' },
-  { icon: CycleIcon, label: 'Cyclical Pattern' },
-  { icon: WarningIcon, label: 'Fear of Losing Account' },
-  { icon: MoneyIcon, label: 'Prefers Currency' },
-  { icon: StarIcon, label: 'Trusts KOLs' },
+  { icon: GamepadHardcoreIcon, label: 'Хардкор' },
+  { icon: PersonIcon, label: 'Взрослый' },
+  { icon: CycleIcon, label: 'Цикличный спрос' },
+  { icon: WarningIcon, label: 'Страх бана' },
+  { icon: MoneyIcon, label: 'Валюта важнее' },
+  { icon: StarIcon, label: 'Доверяет KOL' },
 ]
 
 export function MainInsightSlide() {

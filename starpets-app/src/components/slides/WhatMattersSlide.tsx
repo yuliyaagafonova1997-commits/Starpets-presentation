@@ -6,15 +6,15 @@ import './WhatMattersSlide.css';
 // PDF page 7 — What would you pay the most attention to when buying in-game items?
 // 36 ответов (multi-select). Топ-9 значимых пунктов.
 const whatMattersData = [
-  { label: 'Marketplace reputation (overview)', value: 75, count: 27, highlight: true },
-  { label: 'Price and value (best deal)', value: 72.2, count: 26, highlight: true },
-  { label: "Clear seller's deal history", value: 66.7, count: 24 },
-  { label: 'Payment security (trusted methods)', value: 55.6, count: 20 },
-  { label: 'Delivery speed', value: 52.8, count: 19 },
-  { label: 'Account safety (no ban risk)', value: 44.4, count: 16 },
-  { label: 'Endorsement from trusted streamer', value: 25, count: 9 },
-  { label: 'Customer support quality', value: 19.4, count: 7 },
-  { label: 'Marketplace visibility (lots of ads)', value: 19.4, count: 7 },
+  { label: 'Репутация площадки', value: 75, count: 27, highlight: true },
+  { label: 'Цена и выгода', value: 72.2, count: 26, highlight: true },
+  { label: 'История сделок продавца', value: 66.7, count: 24 },
+  { label: 'Безопасность оплаты', value: 55.6, count: 20 },
+  { label: 'Скорость доставки', value: 52.8, count: 19 },
+  { label: 'Безопасность аккаунта', value: 44.4, count: 16 },
+  { label: 'Рекомендация стримера', value: 25, count: 9 },
+  { label: 'Качество поддержки', value: 19.4, count: 7 },
+  { label: 'Узнаваемость бренда', value: 19.4, count: 7 },
 ];
 
 export function WhatMattersSlide() {
@@ -71,7 +71,6 @@ export function WhatMattersSlide() {
           </div>
         </div>
       </div>
-      <span className="data-source">N&nbsp;=&nbsp;36 · Опрос PoE-аудитории, 2025 · multi-select</span>
     </Slide>
   );
 }

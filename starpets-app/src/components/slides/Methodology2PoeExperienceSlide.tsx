@@ -5,9 +5,9 @@ import { GamepadHardcoreIcon } from '../icons';
 import './ThesisSlide.css';
 
 const gamerData = [
-  { label: 'Average gamer', value: 44.4, count: 16, color: chartColors.orange, highlight: true },
-  { label: 'Hardcore gamer', value: 38.9, count: 14, color: chartColors.black },
-  { label: 'Casual gamer', value: 16.7, count: 6, color: chartColors.lightGray },
+  { label: 'Средний игрок', value: 44.4, count: 16, color: chartColors.orange, highlight: true },
+  { label: 'Хардкор-игрок', value: 38.9, count: 14, color: chartColors.black },
+  { label: 'Казуальный игрок', value: 16.7, count: 6, color: chartColors.lightGray },
 ];
 
 export function Methodology2PoeExperienceSlide() {
@@ -55,7 +55,6 @@ export function Methodology2PoeExperienceSlide() {
           </div>
         </div>
       </div>
-      <span className="data-source">N&nbsp;=&nbsp;36 · Опрос PoE-аудитории, 2025</span>
     </Slide>
   );
 }

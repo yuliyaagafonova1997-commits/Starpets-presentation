@@ -38,7 +38,7 @@ export function ResearcherInsight2Slide() {
               items: [
                 { label: 'Конверсия', value: '~5%', color: chartColors.red },
                 { label: 'Риск бана', value: '~70%', color: chartColors.red },
-                { label: 'Reception', value: 'Токсичный', color: chartColors.gray },
+                { label: 'Реакция', value: 'Токсичный', color: chartColors.gray },
               ],
               caption: 'Канал чувствует давление и закрывается',
             }}
@@ -47,7 +47,7 @@ export function ResearcherInsight2Slide() {
               items: [
                 { label: 'Конверсия', value: '~15%', color: chartColors.green },
                 { label: 'Риск бана', value: '~40%', color: chartColors.orange },
-                { label: 'Reception', value: 'Нейтральный', color: chartColors.green },
+                { label: 'Реакция', value: 'Нейтральный', color: chartColors.green },
               ],
               caption: 'Требует нативности и пользы в контенте',
             }}

@@ -5,16 +5,16 @@ import './CurrencyKingSlide.css';
 
 // PDF page 10 — what would you most likely buy (36 ответов).
 const buyData = [
-  { label: 'In-game currency (Divine/Chaos)', value: 25, color: chartColors.orange },
-  { label: 'In-game services (leveling, etc.)', value: 8, color: chartColors.gray },
-  { label: 'In-game items (Headhunter, etc.)', value: 3, color: chartColors.black },
+  { label: 'Валюта (Divine/Chaos)', value: 25, color: chartColors.orange },
+  { label: 'Услуги (прокачка и др.)', value: 8, color: chartColors.gray },
+  { label: 'Предметы (Headhunter и др.)', value: 3, color: chartColors.black },
 ];
 
 // PDF page 10 — what would you most likely sell (36 ответов).
 const sellData = [
-  { label: 'In-game currency (Divine/Chaos)', value: 26, color: chartColors.orange },
-  { label: 'In-game services (leveling, etc.)', value: 6, color: chartColors.gray },
-  { label: 'In-game items (Headhunter, etc.)', value: 4, color: chartColors.black },
+  { label: 'Валюта (Divine/Chaos)', value: 26, color: chartColors.orange },
+  { label: 'Услуги (прокачка и др.)', value: 6, color: chartColors.gray },
+  { label: 'Предметы (Headhunter и др.)', value: 4, color: chartColors.black },
 ];
 
 const todos = [
@@ -47,22 +47,20 @@ export function CurrencyKingSlide() {
           <div className="currency-chart-label">Что покупают</div>
           <PieChart
             data={buyData}
-            size={180}
-            thickness={30}
+            size={140}
+            thickness={24}
             centerLabel="69%"
             centerSubLabel="currency"
-            countUnit={36}
           />
         </div>
         <div className="currency-chart-card">
           <div className="currency-chart-label">Что продают</div>
           <PieChart
             data={sellData}
-            size={180}
-            thickness={30}
+            size={140}
+            thickness={24}
             centerLabel="72%"
             centerSubLabel="currency"
-            countUnit={36}
           />
         </div>
         <div className="currency-todo">
@@ -80,7 +78,6 @@ export function CurrencyKingSlide() {
           </ul>
         </div>
       </div>
-      <span className="data-source">N&nbsp;=&nbsp;36 · Опрос PoE-аудитории, 2025</span>
     </Slide>
   );
 }
