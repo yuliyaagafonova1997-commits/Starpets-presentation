@@ -218,6 +218,29 @@
     .insight-tag { display: flex; align-items: center; gap: 12px; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 24px; font-size: 15px; font-weight: 500; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
     .insight-tag:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); border-color: var(--accent); }
     .insight-tag .icon { font-size: 20px; }
+
+    /* Main Insight Diagram */
+    .insight-diagram { display: flex; align-items: center; justify-content: center; flex: 1; position: relative; }
+    .insight-center { position: relative; width: 320px; height: 320px; display: flex; align-items: center; justify-content: center; }
+    .insight-person { position: relative; width: 120px; height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10; }
+    .insight-person-head { width: 60px; height: 60px; background: linear-gradient(180deg, #4a4a6a 0%, #2a2a4a 100%); border-radius: 50%; box-shadow: 0 4px 20px rgba(80, 80, 120, 0.4); }
+    .insight-person-body { width: 40px; height: 50px; background: linear-gradient(180deg, #3a3a5a 0%, #2a2a4a 100%); border-radius: 20px 20px 12px 12px; margin-top: -5px; box-shadow: 0 4px 15px rgba(80, 80, 120, 0.3); }
+    .insight-poe-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; z-index: 20; }
+    .insight-poe-icon svg { width: 100%; height: 100%; }
+    .insight-ring { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 1px solid rgba(254, 153, 32, 0.2); border-radius: 50%; pointer-events: none; }
+    .insight-ring-1 { width: 200px; height: 200px; }
+    .insight-ring-2 { width: 280px; height: 280px; }
+    .insight-ring-3 { width: 360px; height: 360px; }
+    .insight-blocks { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; }
+    .insight-block { position: absolute; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 20px; font-size: 13px; font-weight: 600; white-space: nowrap; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
+    .insight-block:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); border-color: var(--accent); z-index: 30; }
+    .insight-block-1 { top: -10px; left: 50%; transform: translateX(-50%); }
+    .insight-block-2 { top: 60px; right: -20px; }
+    .insight-block-3 { bottom: 60px; right: -20px; }
+    .insight-block-4 { bottom: -10px; left: 50%; transform: translateX(-50%); }
+    .insight-block-5 { bottom: 60px; left: -20px; }
+    .insight-block-6 { top: 60px; left: -20px; }
+    .insight-connector { position: absolute; top: 50%; left: 50%; width: 2px; height: 2px; background: var(--accent); border-radius: 50%; z-index: 5; }
     .insight-row { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 20px; padding: 20px 24px; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-sm); transition: border-color 0.3s; }
     .insight-row:hover { border-color: var(--accent); }
     .insight-num { width: 28px; height: 28px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; color: #fff; }
@@ -290,13 +313,39 @@
           <div class="section-header">
             <h2 class="section-title">Главный инсайт</h2>
           </div>
-          <div class="insight-tags">
-            <div class="insight-tag"><span class="icon">🎮</span> hardcore</div>
-            <div class="insight-tag"><span class="icon">👤</span> adult</div>
-            <div class="insight-tag"><span class="icon">🔄</span> cyclical pattern</div>
-            <div class="insight-tag"><span class="icon">⚠️</span> fear of losing the account</div>
-            <div class="insight-tag"><span class="icon">💰</span> prefers currency</div>
-            <div class="insight-tag"><span class="icon">🌟</span> trusts KOLs</div>
+          <div class="insight-diagram">
+            <div class="insight-center">
+              <div class="insight-ring insight-ring-1"></div>
+              <div class="insight-ring insight-ring-2"></div>
+              <div class="insight-ring insight-ring-3"></div>
+              <div class="insight-blocks">
+                <div class="insight-block insight-block-1">🎮 Hardcore</div>
+                <div class="insight-block insight-block-2">👤 Adult</div>
+                <div class="insight-block insight-block-3">🔄 Cyclical Pattern</div>
+                <div class="insight-block insight-block-4">⚠️ Fear of Losing Account</div>
+                <div class="insight-block insight-block-5">💰 Prefers Currency</div>
+                <div class="insight-block insight-block-6">🌟 Trusts KOLs</div>
+              </div>
+              <div class="insight-person">
+                <div class="insight-person-head"></div>
+                <div class="insight-person-body"></div>
+                <div class="insight-poe-icon">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="poeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#c9a227"/>
+                        <stop offset="50%" style="stop-color:#8b6914"/>
+                        <stop offset="100%" style="stop-color:#5c4a0f"/>
+                      </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#poeGrad2)" stroke-width="4"/>
+                    <path d="M50 15 L65 35 L85 40 L70 55 L75 80 L50 70 L25 80 L30 55 L15 40 L35 35 Z" fill="url(#poeGrad2)" opacity="0.9"/>
+                    <circle cx="50" cy="50" r="12" fill="#ffffff"/>
+                    <circle cx="50" cy="50" r="6" fill="url(#poeGrad2)"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
