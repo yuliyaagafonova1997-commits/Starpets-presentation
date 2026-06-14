@@ -5,14 +5,15 @@ import {
   ResearcherInsightsSlide,
   AudienceSlide,
   PainDiagramSlide,
-  PainDiagram2Slide,
-  PainPointsSlide,
+  WhyNeverBoughtSlide,
+  WhatMattersSlide,
   HypothesesSlide,
   CycleSlide,
   CurrencyKingSlide,
   ViralMechanicsSlide,
   BriefProductSlide,
-  BriefMarketingSlide,
+  BriefMarketingPaidSlide,
+  BriefInfluenceCrmSlide,
   OpenQuestionsSlide,
 } from './components/slides';
 import './App.css';
@@ -26,14 +27,15 @@ function App() {
       <ResearcherInsightsSlide />
       <AudienceSlide />
       <PainDiagramSlide />
-      <PainDiagram2Slide />
-      <PainPointsSlide />
+      <WhyNeverBoughtSlide />
+      <WhatMattersSlide />
       <HypothesesSlide />
       <CycleSlide />
       <CurrencyKingSlide />
       <ViralMechanicsSlide />
       <BriefProductSlide />
-      <BriefMarketingSlide />
+      <BriefMarketingPaidSlide />
+      <BriefInfluenceCrmSlide />
       <OpenQuestionsSlide />
     </div>
   );

@@ -6,11 +6,13 @@ interface SlideProps {
   total: number;
   children: React.ReactNode;
   center?: boolean;
+  /** Dark variant: dark gradient background, inverse text. */
+  dark?: boolean;
 }
 
-export function Slide({ number, total, children, center = false }: SlideProps) {
+export function Slide({ number, total, children, center = false, dark = false }: SlideProps) {
   return (
-    <div className="slide">
+    <div className={`slide ${dark ? 'slide-dark' : ''}`}>
       <div
         className="slide-inner"
         style={center ? { justifyContent: 'center', alignItems: 'center' } : undefined}

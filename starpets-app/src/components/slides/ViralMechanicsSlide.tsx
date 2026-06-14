@@ -1,41 +1,45 @@
 import { Slide } from '../ui/Slide';
+import { GroupIcon, GamepadIcon, PenIcon, EyeIcon } from '../icons';
 import './ViralMechanicsSlide.css';
+
+const branches = [
+  { icon: GroupIcon, title: 'Присоединение к коммьюнити', sub: 'Discord, Twitch, Reddit' },
+  { icon: GamepadIcon, title: 'Участие в активности', sub: 'Ивент — 1000 points' },
+  { icon: PenIcon, title: 'UGC вовне', sub: 'Гайды и обзоры' },
+  { icon: EyeIcon, title: 'Привлечение внимания', sub: 'Инфлюенсеры, KOL' },
+];
 
 export function ViralMechanicsSlide() {
   return (
-    <Slide number={12} total={15}>
+    <Slide number={12} total={16}>
       <div className="section-header">
         <h2 className="section-title">Виральная механика без Dev-ресурса</h2>
+        <p className="section-subtitle">
+          Четыре рычага роста, которые работают без инженерных вложений — только за&nbsp;счёт
+          коммьюнити и&nbsp;партнёрств
+        </p>
       </div>
       <div className="viral-diagram">
         <div className="viral-hub">
-          <div className="viral-hub-box">Starpets — Рост без привлечения Dev</div>
+          <div className="viral-hub-box">Starpets — рост без привлечения Dev</div>
         </div>
         <div className="viral-branches">
-          <div className="viral-branch">
-            <div className="v-icon">👥</div>
-            <h4>Присоединение к коммьюнити</h4>
-            <p>Discord, Twitch, Reddit</p>
-          </div>
-          <div className="viral-branch">
-            <div className="v-icon">🎮</div>
-            <h4>Участие в активности</h4>
-            <p>Ивент — 1000 points</p>
-          </div>
-          <div className="viral-branch">
-            <div className="v-icon">✍️</div>
-            <h4>UGC вовне</h4>
-            <p>Гайды и обзоры</p>
-          </div>
-          <div className="viral-branch">
-            <div className="v-icon">👁️</div>
-            <h4>Привлечение внимания</h4>
-            <p>Инфлюенсеры, KOL</p>
-          </div>
+          {branches.map((b, i) => {
+            const Icon = b.icon;
+            return (
+              <div key={i} className="viral-branch">
+                <div className="v-icon">
+                  <Icon size={28} color="var(--accent)" />
+                </div>
+                <h4>{b.title}</h4>
+                <p>{b.sub}</p>
+              </div>
+            );
+          })}
         </div>
         <div className="viral-note">
-          <strong>Для Антона:</strong> Заменить пузырь «совет слота» на «участие в ивенте» — 1000
-          points; заменить Ebaka на Starpets
+          <strong>Для Антона:</strong> Заменить пузырь «совет слота» на «участие в&nbsp;ивенте» —
+          1000 points; заменить Ebaka на&nbsp;Starpets
         </div>
       </div>
     </Slide>

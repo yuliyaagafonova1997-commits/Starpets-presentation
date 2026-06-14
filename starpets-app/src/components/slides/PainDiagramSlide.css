@@ -1,65 +1,107 @@
-.pain-diagram {
+.pain-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.pain-top-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 6px;
+  position: relative;
 }
 
-.pain-center {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #ff3b30, #ff6b6b);
+.pain-top-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 32px;
+  margin-bottom: 8px;
+}
+
+.pain-top-pct {
+  font-size: clamp(32px, 3vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.pain-top-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 4px 0 4px;
+  letter-spacing: -0.01em;
   line-height: 1.3;
-  color: #fff;
-  box-shadow: 0 0 60px rgba(255, 59, 48, 0.25);
-  margin-bottom: 40px;
 }
 
-.pain-spokes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.pain-top-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.pain-top-count {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.pain-secondary {
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  padding: 18px 24px;
+}
+
+.pain-secondary-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.pain-secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  max-width: 900px;
 }
 
-.pain-spoke {
+.pain-secondary-item {
   display: flex;
   align-items: center;
-  gap: 14px;
-  background: var(--card-bg);
-  background-color: #f5f5f7;
-  border-radius: var(--radius-sm);
-  padding: 18px 22px;
-  min-width: 280px;
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-primary);
 }
 
-.pain-spoke:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  /* border-color removed */ background-color: #f5f5f7;
-}
-
-.pain-spoke-icon {
-  font-size: 24px;
+.pain-secondary-icon {
+  display: inline-flex;
   flex-shrink: 0;
 }
 
-.pain-spoke h4 {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 4px;
+.pain-secondary-name {
+  flex: 1;
+  color: var(--text-primary);
 }
 
-.pain-spoke p {
-  font-size: 12px;
+.pain-secondary-pct {
   color: var(--text-secondary);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
 }

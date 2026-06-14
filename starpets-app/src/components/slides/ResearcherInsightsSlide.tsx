@@ -3,7 +3,7 @@ import './ResearcherInsightsSlide.css';
 
 export function ResearcherInsightsSlide() {
   return (
-    <Slide number={4} total={15}>
+    <Slide number={4} total={16}>
       <div className="section-header">
         <h2 className="section-title">Инсайты для ресерчера</h2>
       </div>
@@ -20,7 +20,10 @@ export function ResearcherInsightsSlide() {
         <ol>
           <li>Обещание награды за прохождение не всегда мотивирует, а иногда и наоборот</li>
           <li>Размещение ссылок — красная тряпка</li>
-          <li>Нужно закладывать больший срок на исследование</li>
+          <li>
+              Нужно закладывать больший срок на исследование: получение аппрува →
+              валидация → пост → результаты → выход на интервью
+            </li>
           <li>
             Если продукт под NDA — нужно потестить маскировку. Если называем продукт — конверсия
             в аппрув будет выше

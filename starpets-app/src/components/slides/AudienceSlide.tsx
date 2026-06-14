@@ -1,34 +1,84 @@
 import { Slide } from '../ui/Slide';
+import { PieChart } from '../charts/PieChart';
+import { chartColors } from '../charts/chartColors';
 import './AudienceSlide.css';
+
+const ageData = [
+  { label: '23–27', value: 16, color: chartColors.orange },
+  { label: '27–32', value: 8, color: chartColors.black },
+  { label: '18–23', value: 4, color: chartColors.gray },
+  { label: '32–36', value: 4, color: chartColors.blue },
+  { label: '40+', value: 2, color: chartColors.green },
+  { label: 'Under 18', value: 1, color: chartColors.purple },
+  { label: '36–40', value: 1, color: chartColors.red },
+];
+
+const gamerData = [
+  { label: 'Average gamer', value: 16, color: chartColors.orange },
+  { label: 'Hardcore gamer', value: 14, color: chartColors.black },
+  { label: 'Casual gamer', value: 6, color: chartColors.lightGray },
+];
 
 export function AudienceSlide() {
   return (
-    <Slide number={5} total={15}>
+    <Slide number={5} total={16}>
       <div className="section-header">
         <h2 className="section-title">Кто наша аудитория</h2>
+        <p className="section-subtitle">
+          Взрослые hardcore/semi-hardcore игроки с&nbsp;сотнями часов в&nbsp;PoE&nbsp;— решения
+          осознанные, виральная реклама работает хуже
+        </p>
       </div>
       <div className="audience-grid">
         <div className="audience-card">
-          <div className="audience-num">23–32</div>
           <h3>Возраст</h3>
-          <p>Возраст — 23-32 года</p>
+          <PieChart
+            data={ageData}
+            size={200}
+            thickness={32}
+            centerLabel="36"
+            centerSubLabel="ответов"
+            countUnit={36}
+          />
         </div>
         <div className="audience-card">
-          <div className="audience-num">HC</div>
-          <h3>Hardcore / Semi-hardcore</h3>
-          <p>Hardcore/semi-hardcore игроки с сотнями часов в игре</p>
+          <h3>Тип игрока</h3>
+          <PieChart
+            data={gamerData}
+            size={200}
+            thickness={32}
+            centerLabel="36"
+            centerSubLabel="ответов"
+            countUnit={36}
+          />
         </div>
-        <div className="audience-card">
-          <div className="audience-num">PoE1+2</div>
-          <h3>Ветераны</h3>
-          <p>Ветераны играют и в PoE1 и в PoE2. Новички пропускают первую часть</p>
-        </div>
-        <div className="audience-card">
-          <div className="audience-num">🧠</div>
-          <h3>Взрослый вайб</h3>
-          <p>Взрослый вайб сообщества, более осознанные решения</p>
+        <div className="audience-card audience-card-wide">
+          <h3>Поведение</h3>
+          <ul className="audience-bullets">
+            <li>
+              <span className="dot" style={{ background: chartColors.orange }} />
+              <div>
+                <strong>Hardcore / semi-hardcore</strong> — сотни часов в игре
+              </div>
+            </li>
+            <li>
+              <span className="dot" style={{ background: chartColors.black }} />
+              <div>
+                <strong>Ветераны</strong> играют и в PoE1, и в PoE2. Новички пропускают
+                первую часть
+              </div>
+            </li>
+            <li>
+              <span className="dot" style={{ background: chartColors.gray }} />
+              <div>
+                <strong>Взрослый вайб</strong> сообщества: осознанные решения, меньше
+                влияния «виральной» рекламы
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
+      <span className="data-source">N&nbsp;=&nbsp;36 · Опрос PoE-аудитории, 2025</span>
     </Slide>
   );
 }

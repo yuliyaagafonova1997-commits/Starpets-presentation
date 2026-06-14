@@ -3,7 +3,7 @@ import './HypothesesSlide.css';
 
 export function HypothesesSlide() {
   return (
-    <Slide number={9} total={15}>
+    <Slide number={9} total={16}>
       <div className="section-header">
         <h2 className="section-title">Гипотезы и вердикты</h2>
       </div>
