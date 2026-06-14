@@ -7,7 +7,14 @@
 .ic-card {
   background: var(--card-bg);
   border-radius: var(--radius);
-  padding: 32px;
+  padding: 28px 28px;
+}
+
+.influence-crm-grid .ic-card {
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .ic-card-full {
@@ -17,11 +24,16 @@
 .ic-card h3 {
   font-size: clamp(20px, 1.8vw, 24px);
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   gap: 12px;
   letter-spacing: -0.01em;
+}
+
+.influence-crm-grid .ic-card h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
 }
 
 .ic-card-icon {
@@ -42,12 +54,16 @@
   gap: 16px;
 }
 
+.influence-crm-grid .ic-list {
+  gap: 12px;
+}
+
 .ic-list li {
   font-size: clamp(13px, 1.1vw, 15px);
   color: var(--text-secondary);
-  padding-left: 16px;
+  padding-left: 14px;
   border-left: 2px solid var(--border);
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 .ic-list li strong {

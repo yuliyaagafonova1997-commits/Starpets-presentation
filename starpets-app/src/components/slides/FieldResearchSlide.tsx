@@ -6,11 +6,11 @@ export function FieldResearchSlide() {
     <Slide number={3} total={16}>
       <div className="section-header">
         <h2 className="section-title">Полевая разведка</h2>
-        <p className="section-subtitle">
+        {/*<p className="section-subtitle">
           Два параллельных трека: целевой опрос PoE-аудитории и&nbsp;карта
           сообществ, в&nbsp;которых живут потенциальные покупатели
           и&nbsp;продавцы
-        </p>
+        </p>*/}
       </div>
       <div className="research-grid">
         <div className="research-card">
@@ -21,13 +21,15 @@ export function FieldResearchSlide() {
             преференции по&nbsp;функционалу маркетплейса
           </p>
         </div>
-        <div className="research-card">
-          <h3>2. Карта сообществ</h3>
-          <p>
-            Discord серверы трейдеров (TFT; Eternal Trove) и&nbsp;крупных
-            стримеров; сабреддиты по&nbsp;игре; группы в&nbsp;Facebook; группы
-            маркетплейсов-конкурентов.
-          </p>
+        <div className="research-cards-wrapper">
+          <div className="research-card">
+            <h3>2. Карта сообществ</h3>
+            <p>
+              Discord серверы трейдеров (TFT; Eternal Trove) и&nbsp;крупных
+              стримеров; сабреддиты по&nbsp;игре; группы в&nbsp;Facebook; группы
+              маркетплейсов-конкурентов.
+            </p>
+          </div>
         </div>
       </div>
     </Slide>

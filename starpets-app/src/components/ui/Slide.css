@@ -31,7 +31,7 @@
 
 .slide-content {
   flex: 1;
-  padding: 60px 80px;
+  padding: clamp(20px, 4vw, 60px) clamp(20px, 8vw, 196px);
   overflow: hidden;
   display: flex;
   flex-direction: column;

@@ -1,8 +1,8 @@
-import { Slide } from '../ui/Slide';
-import { LineChart } from '../charts/LineChart';
-import { chartColors } from '../charts/chartColors';
-import { TriggerIcon } from '../icons';
-import './ThesisSlide.css';
+import { LineChart } from '../charts/LineChart'
+import { chartColors } from '../charts/chartColors'
+import { TriggerIcon } from '../icons'
+import { Slide } from '../ui/Slide'
+import './ThesisSlide.css'
 
 // League cycle — derived from CycleSlide data: 27.8% want power level,
 // peak on day 2-3, decline through week 1-2.
@@ -20,7 +20,7 @@ const series = [
       { x: 'Межсезонье', y: 8 },
     ],
   },
-];
+]
 
 export function Methodology5TriggersSlide() {
   return (
@@ -32,10 +32,15 @@ export function Methodology5TriggersSlide() {
             <span>Шаг 5 из&nbsp;6</span>
             <span className="step-num">· Методология</span>
           </div>
-          <h2 className="thesis-headline">Старт лиги&nbsp;=<br />пик спроса</h2>
+          <h2 className="thesis-headline">
+            Старт лиги&nbsp;=
+            <br />
+            пик спроса
+          </h2>
           <p className="thesis-subhead">
-            27.8% идут на&nbsp;маркетплейс ради быстрого power level. Спрос жёстко
-            привязан к&nbsp;старту лиги&nbsp;— пик в&nbsp;день 1–3, спад после недели
+            27.8% идут на&nbsp;маркетплейс ради быстрого power level. Спрос
+            жёстко привязан к&nbsp;старту лиги&nbsp;— пик в&nbsp;день 1–3, спад
+            после недели
           </p>
           <ul className="thesis-bullets">
             <li>
@@ -51,10 +56,24 @@ export function Methodology5TriggersSlide() {
         </div>
         <div className="thesis-right">
           <div className="thesis-right-card">
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-secondary)', marginBottom: 8 }}>
+            <div
+              style={{
+                fontSize: 11,
+                fontWeight: 700,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                color: 'var(--text-secondary)',
+                marginBottom: 8,
+              }}
+            >
               Цикл спроса по&nbsp;лиге
             </div>
-            <LineChart series={series} yLabel="Индекс спроса" baseline={20} compact />
+            <LineChart
+              series={series}
+              yLabel="Индекс спроса"
+              baseline={20}
+              compact
+            />
           </div>
           <div className="thesis-takeaway">
             <div className="thesis-takeaway-label">
@@ -62,12 +81,12 @@ export function Methodology5TriggersSlide() {
               Триггер
             </div>
             <div>
-              Маркетинг вне пика лиги&nbsp;— неэффективен. Запускать активности за&nbsp;3&nbsp;дня
-              до&nbsp;старта
+              Маркетинг вне пика лиги&nbsp;— неэффективен. Запускать активности
+              за&nbsp;3&nbsp;дня до&nbsp;старта
             </div>
           </div>
         </div>
       </div>
     </Slide>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import { Slide } from '../ui/Slide';
-import { PieChart } from '../charts/PieChart';
-import { chartColors } from '../charts/chartColors';
-import './CycleSlide.css';
+import { PieChart } from '../charts/PieChart'
+import { chartColors } from '../charts/chartColors'
+import { Slide } from '../ui/Slide'
+import './CycleSlide.css'
 
 // PDF page 9 — главная причина выбрать маркетплейс (36 ответов).
 // «kickstart + become a seller» — единый пункт в источнике, не разделяем.
@@ -9,10 +9,14 @@ const reasonData = [
   { label: 'Быстрее прокачаться', value: 10, color: chartColors.orange },
   { label: 'Попробовать разные билды', value: 7, color: chartColors.gray600 },
   { label: 'Не отставать от топов', value: 4, color: chartColors.black },
-  { label: 'Стартовать / стать продавцом', value: 3, color: chartColors.orange500 },
+  {
+    label: 'Стартовать / стать продавцом',
+    value: 3,
+    color: chartColors.orange500,
+  },
   { label: 'Избежать скама в игре', value: 1, color: chartColors.gray1000 },
   { label: 'Другое', value: 11, color: chartColors.lightGray },
-];
+]
 
 // PDF page 9 — что делают вместо маркетплейса (36 ответов).
 const insteadData = [
@@ -23,14 +27,14 @@ const insteadData = [
   { label: 'Продавали свои предметы', value: 4, color: chartColors.gray500 },
   { label: 'Ждали / откладывали', value: 2, color: chartColors.gray },
   { label: 'Обманывали игроков', value: 1, color: chartColors.gray1000 },
-];
+]
 
 const phases = [
   { num: 1, name: 'Старт', desc: 'Максимальный спрос на валюту' },
   { num: 2, name: 'Пик (2–3 день)', desc: 'Цены упали, второй всплеск' },
   { num: 3, name: 'Спад', desc: 'Активность падает' },
   { num: 4, name: 'Межсезонье', desc: 'Минимум активности' },
-];
+]
 
 export function CycleSlide() {
   return (
@@ -38,9 +42,9 @@ export function CycleSlide() {
       <div className="section-header">
         <h2 className="section-title">Цикличность игры и сценарии покупки</h2>
         <p className="section-subtitle">
-          Спрос жёстко привязан к&nbsp;старту лиги. Нужен капитал&nbsp;— идут
-          на&nbsp;маркетплейс; не&nbsp;хотят рисковать&nbsp;— фармят или берут
-          у&nbsp;друзей
+          Спрос жёстко привязан к&nbsp;старту лиги. Нужен капитал&nbsp;—
+          потенциально могут пойти на маркетплейс, не&nbsp;хотят
+          рисковать&nbsp;— фармят или берут у&nbsp;друзей
         </p>
       </div>
       <div className="phase-strip">
@@ -68,7 +72,9 @@ export function CycleSlide() {
           />
         </div>
         <div className="cycle-chart-card">
-          <div className="cycle-chart-title">Что делают, если не маркетплейс</div>
+          <div className="cycle-chart-title">
+            Что делают, если не маркетплейс
+          </div>
           <PieChart
             data={insteadData}
             size={140}
@@ -81,5 +87,5 @@ export function CycleSlide() {
         </div>
       </div>
     </Slide>
-  );
+  )
 }

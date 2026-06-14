@@ -1,7 +1,7 @@
-import { Slide } from '../ui/Slide';
-import { PieChart } from '../charts/PieChart';
-import { chartColors } from '../charts/chartColors';
-import './WhyNeverBoughtSlide.css';
+import { PieChart } from '../charts/PieChart'
+import { chartColors } from '../charts/chartColors'
+import { Slide } from '../ui/Slide'
+import './WhyNeverBoughtSlide.css'
 
 // PDF page 6 — главная причина, по которой не покупали на сторонних площадках.
 // 29 ответов. Видимые значения с PDF: 17.2% (5), 27.6% (8), 10.3% (3), 27.6% (8).
@@ -15,13 +15,15 @@ const neverBoughtData = [
   { label: 'Процесс кажется сложным', value: 2, color: chartColors.orange700 },
   { label: 'Не знал, что так можно', value: 2, color: chartColors.orange300 },
   { label: 'Нет надёжной площадки', value: 1, color: chartColors.gray },
-];
+]
 
 export function WhyNeverBoughtSlide() {
   return (
     <Slide number={7} total={16}>
       <div className="section-header">
-        <h2 className="section-title">Почему не покупают на маркетплейсах</h2>
+        <h2 className="section-title">
+          Барьеры: почему не покупают на маркетплейсах
+        </h2>
         <p className="section-subtitle">
           Главный страх — бан аккаунта. Два этих барьера должен снять продукт
         </p>
@@ -48,7 +50,8 @@ export function WhyNeverBoughtSlide() {
           <div className="takeaway">
             <div className="takeaway-num">27.6%</div>
             <div className="takeaway-text">
-              <strong>Хотят заработать валюту сами</strong> — не мешают остальным
+              <strong>Хотят заработать валюту сами</strong> — не мешают
+              остальным
             </div>
           </div>
           <div className="takeaway">
@@ -60,12 +63,12 @@ export function WhyNeverBoughtSlide() {
           <div className="takeaway takeaway-product">
             <div className="takeaway-label">Вывод для продукта</div>
             <div className="takeaway-text">
-              Escrow, страховка от&nbsp;бана и&nbsp;импорт репутации конвертируют эту
-              аудиторию
+              Escrow, страховка от&nbsp;бана и&nbsp;импорт репутации
+              конвертируют эту аудиторию
             </div>
           </div>
         </div>
       </div>
     </Slide>
-  );
+  )
 }

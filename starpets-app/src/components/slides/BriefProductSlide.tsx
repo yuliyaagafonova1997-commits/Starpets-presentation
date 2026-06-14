@@ -1,6 +1,5 @@
-import { Slide } from '../ui/Slide';
-import { PackageIcon } from '../icons';
-import './BriefProductSlide.css';
+import { Slide } from '../ui/Slide'
+import './BriefProductSlide.css'
 
 const tasks = [
   {
@@ -14,11 +13,16 @@ const tasks = [
     time: '2 недели',
   },
   {
+    title: 'Перенос репутации',
+    text: 'с G2G/FunPay',
+    time: '2 недели',
+  },
+  {
     title: 'User story для онбординга',
     text: 'новичков — через месяц',
     time: '1 месяц',
   },
-];
+]
 
 export function BriefProductSlide() {
   return (
@@ -26,17 +30,15 @@ export function BriefProductSlide() {
       <div className="section-header">
         <h2 className="section-title">Брифинг команд: продукт</h2>
         <p className="section-subtitle">
-          Три ключевых артефакта на&nbsp;горизонте месяца: витрина валюты, схема Escrow
-          и&nbsp;онбординг для новичков
+          Четыре ключевых артефакта на&nbsp;горизонте месяца: витрина валюты,
+          схема Escrow, перенос репутации с&nbsp;G2G/FunPay и&nbsp;онбординг для
+          новичков
         </p>
       </div>
+      <figure className="brief-screenshot">
+        <img src="/orbs.png" alt="Прототип витрины валюты: валюта + курс" />
+      </figure>
       <div className="brief-block">
-        <h3>
-          <span className="brief-icon">
-            <PackageIcon size={22} color="var(--accent)" />
-          </span>
-          Продукт
-        </h3>
         <ul className="brief-tasks">
           {tasks.map((t, i) => (
             <li key={i} className="brief-task">
@@ -49,5 +51,5 @@ export function BriefProductSlide() {
         </ul>
       </div>
     </Slide>
-  );
+  )
 }

@@ -5,6 +5,11 @@
   flex: 1;
 }
 
+.research-cards-wrapper {
+  max-width: 900px;
+  width: 100%;
+}
+
 .research-card {
   background: var(--card-bg);
   border-radius: var(--radius);

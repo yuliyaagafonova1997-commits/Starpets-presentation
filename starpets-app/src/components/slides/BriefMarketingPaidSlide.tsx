@@ -28,12 +28,6 @@ export function BriefMarketingPaidSlide() {
           <li>
             <strong>Баннеры на Poe Ninja/Wiki</strong> — исследовать толерантность к RMT
           </li>
-          <li>
-            <strong>2–3 стримера-гайдодела</strong> для нативных интеграций
-          </li>
-          <li>
-            <strong>Пилот с лояльными инфлюенсерами</strong> — открытая реклама RMT
-          </li>
         </ul>
       </div>
     </Slide>
