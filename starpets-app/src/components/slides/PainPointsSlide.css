@@ -1,0 +1,42 @@
+.pains-horizontal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.pain-h-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pain-h-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.pain-h-item .label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+.pain-h-item h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-style: italic;
+}
+
+.pain-h-item p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}

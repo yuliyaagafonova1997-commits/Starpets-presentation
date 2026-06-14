@@ -1,0 +1,80 @@
+.currency-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.currency-orbs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.orb-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.orb-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.orb-icon {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.orb-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.orb-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.todo-box {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 1px solid #2d2d5a;
+  border-radius: var(--radius);
+  padding: 36px;
+}
+
+.todo-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.todo-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+.todo-list li::before {
+  content: '→';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}

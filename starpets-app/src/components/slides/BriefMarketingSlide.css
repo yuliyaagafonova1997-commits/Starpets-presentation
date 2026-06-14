@@ -1,0 +1,53 @@
+.influence-crm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.ic-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ic-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.ic-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ic-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ic-list li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding-left: 16px;
+  border-left: 2px solid var(--border);
+  line-height: 1.6;
+}
+
+.ic-list li strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.ic-sub {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}

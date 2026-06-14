@@ -1,0 +1,36 @@
+.pain-periphery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.pain-periph-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pain-periph-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.pain-periph-item .icon {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.pain-periph-item h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.pain-periph-item p {
+  font-size: 12px;
+  color: var(--text-secondary);
+}

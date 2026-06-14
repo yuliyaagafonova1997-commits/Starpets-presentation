@@ -1,0 +1,154 @@
+.cycle-diagram {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cycle-wheel {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  margin: 0 auto;
+}
+
+.cycle-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 12px;
+  z-index: 2;
+}
+
+.cycle-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--border);
+  border-radius: 50%;
+}
+
+.cycle-ring-1 {
+  width: 180px;
+  height: 180px;
+  border-color: rgba(0, 113, 227, 0.3);
+}
+
+.cycle-ring-2 {
+  width: 260px;
+  height: 260px;
+  border-color: rgba(0, 113, 227, 0.5);
+}
+
+.cycle-ring-3 {
+  width: 340px;
+  height: 340px;
+  border-color: var(--accent);
+}
+
+.cycle-node {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 6px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.cycle-node:hover {
+  border-color: var(--accent);
+  transform: scale(1.1);
+}
+
+.cycle-node .c-icon {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.cycle-node-1 {
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cycle-node-2 {
+  top: 50%;
+  right: -36px;
+  transform: translateY(-50%);
+}
+
+.cycle-node-3 {
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cycle-node-4 {
+  top: 50%;
+  left: -36px;
+  transform: translateY(-50%);
+}
+
+.cycle-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cycle-label-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cycle-label-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.cycle-label-item .phase {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.cycle-label-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.cycle-label-item p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}

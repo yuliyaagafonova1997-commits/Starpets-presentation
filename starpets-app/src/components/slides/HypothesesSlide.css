@@ -1,0 +1,79 @@
+.hypo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hypo-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 28px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.hypo-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border-color: var(--accent);
+}
+
+.hypo-num {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.hypo-content h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.hypo-content p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.verdict {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.verdict-confirmed {
+  background: rgba(48, 209, 88, 0.15);
+  color: var(--green);
+}
+
+.verdict-reformulated {
+  background: rgba(255, 159, 10, 0.15);
+  color: var(--orange);
+}
+
+.verdict-note {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(48, 209, 88, 0.08);
+  color: rgba(48, 209, 88, 0.6);
+  margin-left: 8px;
+}
