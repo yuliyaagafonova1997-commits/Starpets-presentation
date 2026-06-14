@@ -24,7 +24,7 @@ export function Methodology4PainsBarriersSlide() {
               value="27.6%"
               label="Бан"
               caption="Fear of account ban"
-              accent={chartColors.red}
+              accent={chartColors.gray1000}
               glyph="P2"
               compact
             />
@@ -40,7 +40,7 @@ export function Methodology4PainsBarriersSlide() {
               value="17.2%"
               label="Скам"
               caption="Risk of scams"
-              accent={chartColors.blue}
+              accent={chartColors.gray600}
               glyph="P3"
               compact
             />
@@ -53,13 +53,13 @@ export function Methodology4PainsBarriersSlide() {
             </div>
             <ul className="thesis-bullets">
               <li>
-                <BanIcon size={16} color={chartColors.red} /> P2P кажется подозрительным — 10.3%
+                <BanIcon size={16} color={chartColors.gray1000} /> P2P кажется подозрительным — 10.3%
               </li>
               <li>
                 <ScaredIcon size={16} color={chartColors.orange} /> Долгий вывод средств — 6.9%
               </li>
               <li>
-                <MoneyIcon size={16} color={chartColors.blue} /> Высокие комиссии — 6.9%
+                <MoneyIcon size={16} color={chartColors.gray600} /> Высокие комиссии — 6.9%
               </li>
               <li>
                 <MoneyIcon size={16} color={chartColors.gray} /> Качество поддержки — 3.5%

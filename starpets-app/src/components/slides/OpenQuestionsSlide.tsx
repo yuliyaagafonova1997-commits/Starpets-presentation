@@ -1,23 +1,27 @@
 import { Slide } from '../ui/Slide';
-import { QuestionIcon } from '../icons';
+import { PersonIcon, MoneyIcon, GroupIcon, StarIcon } from '../icons';
 import './OpenQuestionsSlide.css';
 
 const questions = [
   {
     title: 'Можно ли конвертировать принципиальных противников',
     text: 'вроде Кори без официального партнёрства с GGG?',
+    Icon: PersonIcon,
   },
   {
     title: 'Каков реальный LTV',
     text: 'покупателя и продавца? Требуются когортные данные.',
+    Icon: MoneyIcon,
   },
   {
     title: 'Как массово переманить продавцов с G2G и FunPay?',
     text: 'Гипотеза: перенос репутации + нулевая комиссия.',
+    Icon: GroupIcon,
   },
   {
     title: 'Готовы ли топ-стримеры',
     text: 'открыто рекламировать RMT-сервис? Нужен пилот.',
+    Icon: StarIcon,
   },
 ];
 
@@ -32,16 +36,19 @@ export function OpenQuestionsSlide() {
         </p>
       </div>
       <div className="questions-grid">
-        {questions.map((q, i) => (
-          <div key={i} className="question-card">
-            <div className="q-icon">
-              <QuestionIcon size={20} color="var(--accent)" />
+        {questions.map((q, i) => {
+          const Icon = q.Icon;
+          return (
+            <div key={i} className="question-card">
+              <div className="q-icon">
+                <Icon size={20} color="var(--accent)" />
+              </div>
+              <p>
+                <strong>{q.title}</strong> {q.text}
+              </p>
             </div>
-            <p>
-              <strong>{q.title}</strong> {q.text}
-            </p>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </Slide>
   );

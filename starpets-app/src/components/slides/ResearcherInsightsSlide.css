@@ -28,8 +28,8 @@
 }
 
 .conclusions-box {
-  background: rgba(0, 113, 227, 0.05);
-  border: 1px solid rgba(0, 113, 227, 0.2);
+  background: #000;
+  border: 1px solid #000;
   border-radius: var(--radius);
   padding: 26px 30px;
 }
@@ -37,7 +37,7 @@
 .conclusions-box h4 {
   font-size: 13px;
   font-weight: 700;
-  color: var(--accent);
+  color: #fff;
   margin-bottom: 16px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -48,10 +48,11 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  color: #fff;
 }
 
 .conclusions-box li {
   font-size: 15px;
-  color: var(--text-secondary);
+  color: #fff;
   line-height: 1.6;
 }

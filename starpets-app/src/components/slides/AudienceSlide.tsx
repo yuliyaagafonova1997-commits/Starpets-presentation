@@ -7,10 +7,10 @@ const ageData = [
   { label: '23–27', value: 16, color: chartColors.orange },
   { label: '27–32', value: 8, color: chartColors.black },
   { label: '18–23', value: 4, color: chartColors.gray },
-  { label: '32–36', value: 4, color: chartColors.blue },
-  { label: '40+', value: 2, color: chartColors.green },
-  { label: 'До 18', value: 1, color: chartColors.purple },
-  { label: '36–40', value: 1, color: chartColors.red },
+  { label: '32–36', value: 4, color: chartColors.gray600 },
+  { label: '40+', value: 2, color: chartColors.orange500 },
+  { label: 'До 18', value: 1, color: chartColors.orange700 },
+  { label: '36–40', value: 1, color: chartColors.gray1000 },
 ];
 
 const gamerData = [

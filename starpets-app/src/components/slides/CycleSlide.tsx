@@ -7,22 +7,22 @@ import './CycleSlide.css';
 // «kickstart + become a seller» — единый пункт в источнике, не разделяем.
 const reasonData = [
   { label: 'Быстрее прокачаться', value: 10, color: chartColors.orange },
-  { label: 'Попробовать разные билды', value: 7, color: chartColors.blue },
+  { label: 'Попробовать разные билды', value: 7, color: chartColors.gray600 },
   { label: 'Не отставать от топов', value: 4, color: chartColors.black },
-  { label: 'Стартовать / стать продавцом', value: 3, color: chartColors.green },
-  { label: 'Избежать скама в игре', value: 1, color: chartColors.red },
+  { label: 'Стартовать / стать продавцом', value: 3, color: chartColors.orange500 },
+  { label: 'Избежать скама в игре', value: 1, color: chartColors.gray1000 },
   { label: 'Другое', value: 11, color: chartColors.lightGray },
 ];
 
 // PDF page 9 — что делают вместо маркетплейса (36 ответов).
 const insteadData = [
   { label: 'Фармили больше обычного', value: 11, color: chartColors.orange },
-  { label: 'P2P-торговля в игре', value: 7, color: chartColors.blue },
-  { label: 'Брали у друзей / гильдии', value: 7, color: chartColors.green },
-  { label: 'Флипали / крафтили', value: 4, color: chartColors.purple },
-  { label: 'Продавали свои предметы', value: 4, color: chartColors.teal },
+  { label: 'P2P-торговля в игре', value: 7, color: chartColors.gray600 },
+  { label: 'Брали у друзей / гильдии', value: 7, color: chartColors.orange500 },
+  { label: 'Флипали / крафтили', value: 4, color: chartColors.orange700 },
+  { label: 'Продавали свои предметы', value: 4, color: chartColors.gray500 },
   { label: 'Ждали / откладывали', value: 2, color: chartColors.gray },
-  { label: 'Обманывали игроков', value: 1, color: chartColors.red },
+  { label: 'Обманывали игроков', value: 1, color: chartColors.gray1000 },
 ];
 
 const phases = [

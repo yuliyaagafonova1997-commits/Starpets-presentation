@@ -36,8 +36,8 @@ export function ResearcherInsight2Slide() {
             left={{
               title: 'Прямой запрос',
               items: [
-                { label: 'Конверсия', value: '~5%', color: chartColors.red },
-                { label: 'Риск бана', value: '~70%', color: chartColors.red },
+                { label: 'Конверсия', value: '~5%', color: chartColors.gray1000 },
+                { label: 'Риск бана', value: '~70%', color: chartColors.gray1000 },
                 { label: 'Реакция', value: 'Токсичный', color: chartColors.gray },
               ],
               caption: 'Канал чувствует давление и закрывается',
@@ -45,9 +45,9 @@ export function ResearcherInsight2Slide() {
             right={{
               title: 'Пост без запроса',
               items: [
-                { label: 'Конверсия', value: '~15%', color: chartColors.green },
+                { label: 'Конверсия', value: '~15%', color: chartColors.orange500 },
                 { label: 'Риск бана', value: '~40%', color: chartColors.orange },
-                { label: 'Реакция', value: 'Нейтральный', color: chartColors.green },
+                { label: 'Реакция', value: 'Нейтральный', color: chartColors.orange500 },
               ],
               caption: 'Требует нативности и пользы в контенте',
             }}

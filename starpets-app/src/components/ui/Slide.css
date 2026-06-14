@@ -9,35 +9,17 @@
 }
 
 .slide-dark {
-  background: linear-gradient(135deg, #0a0a14 0%, #1a1a2e 40%, #2a1a1e 80%, #3a1f12 100%);
+  background: var(--bg-dark);
   color: var(--text-inverse);
   position: relative;
 }
 
-.slide-dark::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(254, 153, 32, 0.15) 0%, transparent 45%),
-    radial-gradient(circle at 80% 80%, rgba(254, 153, 32, 0.08) 0%, transparent 40%);
-  pointer-events: none;
-  z-index: 0;
-}
-
 .slide-dark .slide-footer {
-  border-top-color: rgba(255, 255, 255, 0.08);
-}
-
-.slide-dark .slide-footer .logo {
-  color: var(--text-inverse);
+  border-top-color: var(--border-inverse);
 }
 
 .slide-dark .slide-footer .slide-num {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-inverse-faint);
 }
 
 .slide-inner {
@@ -71,9 +53,12 @@
 }
 
 .slide-footer .logo {
-  font-weight: 700;
-  color: var(--text-primary);
-  font-size: 13px;
+  height: 16px;
+  width: auto;
+  display: block;
+  /* Slight brightness lift so the orange/yellow parts of the logo
+     read well on the dark slides. The logo already contains its own
+     orange/gray palette. */
 }
 
 .section-title {
@@ -108,7 +93,7 @@
 }
 
 .slide-dark .data-source {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-inverse-faint);
 }
 
 @media print {
@@ -154,7 +139,7 @@
     animation: none !important;
   }
   .slide-dark {
-    background: linear-gradient(135deg, #0a0a14 0%, #1a1a2e 40%, #2a1a1e 80%, #3a1f12 100%) !important;
+    background: var(--bg-dark) !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }

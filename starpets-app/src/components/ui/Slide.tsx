@@ -6,11 +6,13 @@ interface SlideProps {
   total: number;
   children: React.ReactNode;
   center?: boolean;
-  /** Dark variant: dark gradient background, inverse text. */
+  /** Dark variant: solid dark background, inverse text. */
   dark?: boolean;
+  /** Footer logo source. Defaults to the dark-text logo. */
+  logoSrc?: string;
 }
 
-export function Slide({ number, total, children, center = false, dark = false }: SlideProps) {
+export function Slide({ number, total, children, center = false, dark = false, logoSrc = '/logo.svg' }: SlideProps) {
   return (
     <div className={`slide ${dark ? 'slide-dark' : ''}`}>
       <div
@@ -25,7 +27,7 @@ export function Slide({ number, total, children, center = false, dark = false }:
         </div>
       </div>
       <div className="slide-footer">
-        <span className="logo">Starpets</span>
+        <img className="logo" src={logoSrc} alt="Starpets" />
         <span className="slide-num">
           {number} / {total}
         </span>

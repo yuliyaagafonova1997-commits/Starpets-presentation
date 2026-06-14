@@ -31,7 +31,7 @@ export function Hypothesis3Slide() {
             пик в&nbsp;день 1–3, спад после недели
           </p>
           <span className="hypo-verdict hypo-verdict-confirmed">
-            <CheckIcon size={14} color={chartColors.green} />
+            <CheckIcon size={14} color={chartColors.orange500} />
             Подтверждена
           </span>
         </div>

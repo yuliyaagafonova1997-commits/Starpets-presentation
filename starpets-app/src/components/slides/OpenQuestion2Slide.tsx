@@ -36,7 +36,7 @@ export function OpenQuestion2Slide() {
               value="?"
               label="LTV продавца"
               caption="гипотеза: 1 лига активности"
-              accent={chartColors.blue}
+              accent={chartColors.gray600}
               compact
             />
           </div>

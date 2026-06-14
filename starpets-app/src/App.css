@@ -1,20 +1,110 @@
 /* Global design tokens. Defined here as the single source of truth.
-   index.css and component CSS consume these vars — do not duplicate. */
+   index.css and component CSS consume these vars — do not duplicate.
+
+   Palette philosophy: neutral grayscale + single accent (#FE9920).
+   Chart palette uses shades of the accent and grayscale (no rainbow). */
+
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f5f5f7;
-  --bg-tertiary: #1d1d1f;
-  --text-primary: #1d1d1f;
-  --text-secondary: #86868b;
-  --text-inverse: #f5f5f7;
-  --accent: #fe9920;
-  --border: #d2d2d7;
-  --card-bg: #f5f5f7;
+  /* === Pure black & white === */
+  --black: #000000;
+  --white: #ffffff;
+
+  /* === Gray scale (cool, slightly blue-tinted to feel premium) === */
+  --gray-1000: #0a0a0c; /* near-black, page background (dark) */
+  --gray-950: #14141a;  /* deepest surface */
+  --gray-900: #1d1d1f;  /* strong dark surface */
+  --gray-800: #2c2c2e;  /* dark surface */
+  --gray-700: #424245;  /* dark border / strong text on dark */
+  --gray-600: #5a5a5f;  /* medium-dark */
+  --gray-500: #6e6e73;  /* secondary text */
+  --gray-400: #86868b;  /* tertiary text */
+  --gray-300: #a1a1a6;  /* muted */
+  --gray-200: #c7c7cc;  /* light border */
+  --gray-150: #d8d8dc;  /* soft border */
+  --gray-100: #e5e5e7;  /* very light surface */
+  --gray-75: #ececef;   /* softer surface */
+  --gray-50: #f5f5f7;   /* page background (light) */
+  --gray-25: #fafafc;   /* near-white surface */
+
+  /* === Accent orange (the only chromatic color in the system) === */
+  --orange-900: #6b3f00;
+  --orange-800: #8a5200;
+  --orange-700: #a86500;
+  --orange-600: #cc7d05;
+  --orange-550: #e08c10;
+  --orange-500: #fe9920; /* === MAIN ACCENT === */
+  --orange-450: #ffaa3d;
+  --orange-400: #ffb759;
+  --orange-300: #ffc77f;
+  --orange-200: #ffd9a8;
+  --orange-100: #ffeacc;
+  --orange-50: #fff5e6;
+
+  /* === Semantic — surfaces === */
+  --bg-primary: var(--white);
+  --bg-secondary: var(--gray-50);
+  --bg-tertiary: var(--gray-100);
+  --bg-quaternary: var(--gray-25);
+  --bg-dark: var(--gray-1000);
+  --bg-dark-elevated: var(--gray-900);
+  --bg-dark-surface: var(--gray-950);
+  --card-bg: var(--gray-50);
+
+  /* === Semantic — text === */
+  --text-primary: var(--gray-1000);
+  --text-secondary: var(--gray-500);
+  --text-tertiary: var(--gray-400);
+  --text-inverse: var(--white);
+  --text-inverse-muted: rgba(255, 255, 255, 0.65);
+  --text-inverse-faint: rgba(255, 255, 255, 0.45);
+
+  /* === Semantic — borders & dividers === */
+  --border: var(--gray-200);
+  --border-strong: var(--gray-300);
+  --border-subtle: var(--gray-100);
+  --border-inverse: rgba(255, 255, 255, 0.10);
+  --border-inverse-strong: rgba(255, 255, 255, 0.20);
+
+  /* === Semantic — accent === */
+  --accent: var(--orange-500);
+  --accent-hover: var(--orange-550);
+  --accent-press: var(--orange-600);
+  --accent-soft: var(--orange-100);
+  --accent-softer: var(--orange-50);
+  --accent-text: var(--orange-700);
+  --accent-on-dark: var(--orange-500);
+
+  /* === Chart palette (only shades of orange + grays + black) === */
+  /* Ordered: strongest contrast first. Use for stacked / multi-series charts. */
+  --chart-1: var(--orange-500); /* primary accent */
+  --chart-2: var(--gray-1000);  /* black */
+  --chart-3: var(--gray-600);   /* dark gray */
+  --chart-4: var(--gray-400);   /* mid gray */
+  --chart-5: var(--gray-200);   /* light gray */
+  --chart-6: var(--orange-700); /* deep orange */
+  --chart-7: var(--gray-800);   /* very dark gray */
+  --chart-8: var(--orange-300); /* soft orange */
+
+  /* === Functional (kept minimal — only what the design actually uses) === */
+  --positive: var(--orange-500); /* success in this brand = orange */
+  --critical: var(--gray-1000);  /* emphasis on dark side */
+  --neutral: var(--gray-500);
+
+  /* === Shape === */
   --radius: 18px;
   --radius-sm: 12px;
-  --red: #ff3b30;
-  --green: #30d158;
-  --orange: #ff9f0a;
+  --radius-xs: 8px;
+  --radius-pill: 999px;
+
+  /* === Shadows (subtle, no color cast) === */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* === On-dark overlays (alpha on black) === */
+  --overlay-on-dark-1: rgba(255, 255, 255, 0.04);
+  --overlay-on-dark-2: rgba(255, 255, 255, 0.08);
+  --overlay-on-dark-3: rgba(255, 255, 255, 0.12);
 }
 
 * {
@@ -30,7 +120,7 @@ body {
     BlinkMacSystemFont,
     'Segoe UI',
     sans-serif;
-  background: #e8e8ed;
+  background: var(--gray-50);
   color: var(--text-primary);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -46,7 +136,6 @@ body {
   flex-direction: column;
   align-items: stretch;
   padding: 0;
-  /*gap: 16px;*/
-  background: #e8e8ed;
+  background: var(--gray-50);
   min-height: 100vh;
 }

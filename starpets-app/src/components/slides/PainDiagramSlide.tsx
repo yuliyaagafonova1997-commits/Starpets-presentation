@@ -8,7 +8,7 @@ import './PainDiagramSlide.css';
 const topPains = [
   {
     icon: BanIcon,
-    color: chartColors.red,
+    color: chartColors.gray1000,
     pct: '27.6%',
     title: 'Страх бана аккаунта',
     sub: 'Fear of losing the account — главный барьер, страх нарушить правила PoE',
@@ -24,7 +24,7 @@ const topPains = [
   },
   {
     icon: MoneyIcon,
-    color: chartColors.blue,
+    color: chartColors.gray600,
     pct: '17.2%',
     title: 'Риск скама',
     sub: 'Страх обмана — решается escrow и прозрачной историей сделок',

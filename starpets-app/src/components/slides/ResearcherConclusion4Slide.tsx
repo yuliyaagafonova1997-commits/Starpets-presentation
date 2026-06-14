@@ -37,7 +37,7 @@ export function ResearcherConclusion4Slide() {
               title: 'Маскировка (NDA)',
               items: [
                 { label: 'Аппрув', value: '~30%', color: chartColors.orange },
-                { label: 'Доступ к каналам', value: '~85%', color: chartColors.green },
+                { label: 'Доступ к каналам', value: '~85%', color: chartColors.orange500 },
                 { label: 'Риск разоблачения', value: 'Средний', color: chartColors.orange },
               ],
               caption: 'Требует осторожной подачи и тестирования',
@@ -45,9 +45,9 @@ export function ResearcherConclusion4Slide() {
             right={{
               title: 'Открытое имя',
               items: [
-                { label: 'Аппрув', value: '~65%', color: chartColors.green },
-                { label: 'Доступ к каналам', value: '~50%', color: chartColors.red },
-                { label: 'Риск разоблачения', value: 'Нулевой', color: chartColors.green },
+                { label: 'Аппрув', value: '~65%', color: chartColors.orange500 },
+                { label: 'Доступ к каналам', value: '~50%', color: chartColors.gray1000 },
+                { label: 'Риск разоблачения', value: 'Нулевой', color: chartColors.orange500 },
               ],
               caption: 'Быстрее и проще, но не везде пустят',
             }}

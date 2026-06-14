@@ -16,7 +16,7 @@ export function Hypothesis1Slide() {
             реклама не&nbsp;сработает. Нужны точные креативы под&nbsp;осознанную аудиторию
           </p>
           <span className="hypo-verdict hypo-verdict-confirmed">
-            <CheckIcon size={14} color={chartColors.green} />
+            <CheckIcon size={14} color={chartColors.orange500} />
             Подтверждена
           </span>
         </div>

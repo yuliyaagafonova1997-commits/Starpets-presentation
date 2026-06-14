@@ -28,7 +28,7 @@ export function OpenQuestion4Slide() {
             left={{
               title: 'Закрытая реклама',
               items: [
-                { label: 'Безопасность бренда', value: '~95%', color: chartColors.green },
+                { label: 'Безопасность бренда', value: '~95%', color: chartColors.orange500 },
                 { label: 'Охват', value: '~30%', color: chartColors.orange },
                 { label: 'Реакция аудитории', value: 'Нейтральная', color: chartColors.gray },
               ],
@@ -37,9 +37,9 @@ export function OpenQuestion4Slide() {
             right={{
               title: 'Открытая реклама',
               items: [
-                { label: 'Безопасность бренда', value: '~50%', color: chartColors.red },
-                { label: 'Охват', value: '~90%', color: chartColors.green },
-                { label: 'Реакция аудитории', value: 'Риск токсичности', color: chartColors.red },
+                { label: 'Безопасность бренда', value: '~50%', color: chartColors.gray1000 },
+                { label: 'Охват', value: '~90%', color: chartColors.orange500 },
+                { label: 'Реакция аудитории', value: 'Риск токсичности', color: chartColors.gray1000 },
               ],
               caption: 'Стример открыто называет маркетплейс',
             }}

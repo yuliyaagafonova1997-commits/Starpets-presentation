@@ -36,7 +36,7 @@ export function ResearcherInsight1Slide() {
               value="~70%"
               label="Каналов"
               caption="банят / игнорируют прямой запрос"
-              accent={chartColors.red}
+              accent={chartColors.gray1000}
               glyph="R1"
               compact
             />
@@ -52,7 +52,7 @@ export function ResearcherInsight1Slide() {
               value="~10%"
               label="Каналов"
               caption="принимают запрос"
-              accent={chartColors.green}
+              accent={chartColors.orange500}
               glyph="R1"
               compact
             />

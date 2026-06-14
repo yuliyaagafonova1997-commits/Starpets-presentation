@@ -155,7 +155,7 @@ export function LineChart({
             x2={width - padding.right}
             y1={yAt(baseline)}
             y2={yAt(baseline)}
-            stroke={chartColors.red}
+            stroke={chartColors.gray1000}
             strokeWidth={1.5}
             strokeDasharray="6 6"
             opacity={0.7}
@@ -202,7 +202,7 @@ export function LineChart({
             <li className="line-legend-baseline">
               <span
                 className="line-legend-swatch"
-                style={{ background: 'transparent', borderTop: `2px dashed ${chartColors.red}` }}
+                style={{ background: 'transparent', borderTop: `2px dashed ${chartColors.gray1000}` }}
               />
               baseline
             </li>

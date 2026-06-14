@@ -8,12 +8,12 @@ import './WhyNeverBoughtSlide.css';
 // Оставшиеся 5 ответов распределены по 4 малым категориям — взяты пропорционально
 // видимым размерам сегментов.
 const neverBoughtData = [
-  { label: 'Страх бана аккаунта', value: 8, color: chartColors.red },
-  { label: 'Хочу заработать валюту сам', value: 8, color: chartColors.teal },
-  { label: 'Риск скама и потери денег', value: 5, color: chartColors.blue },
-  { label: 'Цены слишком высокие', value: 3, color: chartColors.green },
-  { label: 'Процесс кажется сложным', value: 2, color: chartColors.purple },
-  { label: 'Не знал, что так можно', value: 2, color: chartColors.yellow },
+  { label: 'Страх бана аккаунта', value: 8, color: chartColors.gray1000 },
+  { label: 'Хочу заработать валюту сам', value: 8, color: chartColors.gray500 },
+  { label: 'Риск скама и потери денег', value: 5, color: chartColors.gray600 },
+  { label: 'Цены слишком высокие', value: 3, color: chartColors.orange500 },
+  { label: 'Процесс кажется сложным', value: 2, color: chartColors.orange700 },
+  { label: 'Не знал, что так можно', value: 2, color: chartColors.orange300 },
   { label: 'Нет надёжной площадки', value: 1, color: chartColors.gray },
 ];
 

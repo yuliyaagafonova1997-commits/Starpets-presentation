@@ -6,9 +6,9 @@ import './ThesisSlide.css';
 
 // From WhyNeverBought survey — top reasons.
 const rmtData = [
-  { label: 'Страх бана аккаунта', value: 27.6, count: 8, color: chartColors.red, highlight: true },
+  { label: 'Страх бана аккаунта', value: 27.6, count: 8, color: chartColors.gray1000, highlight: true },
   { label: 'Хочу заработать сам', value: 27.6, count: 8, color: chartColors.orange },
-  { label: 'Риск скама', value: 17.2, count: 5, color: chartColors.blue },
+  { label: 'Риск скама', value: 17.2, count: 5, color: chartColors.gray600 },
   { label: 'Цены слишком высокие', value: 10.3, count: 3, color: chartColors.gray },
 ];
 
@@ -48,7 +48,7 @@ export function Methodology3RmtAttitudeSlide() {
           </div>
           <div className="thesis-takeaway">
             <div className="thesis-takeaway-label">
-              <BanIcon size={14} color={chartColors.red} />
+              <BanIcon size={14} color={chartColors.gray1000} />
               Барьер
             </div>
             <div>
