@@ -316,3 +316,87 @@ export function QuestionIcon({ size = 24, color = 'currentColor', strokeWidth = 
     </svg>
   );
 }
+
+/** Check / confirmed */
+export function CheckIcon({ size = 24, color = 'currentColor', strokeWidth = 1.6, className }: IconProps) {
+  return (
+    <svg {...base(size)} className={className}>
+      <circle cx="12" cy="12" r="9" stroke={color} strokeWidth={strokeWidth} />
+      <path
+        d="M8 12.5 L10.8 15.2 L16 9.5"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+/** Trigger / lightning bolt */
+export function TriggerIcon({ size = 24, color = 'currentColor', strokeWidth = 1.6, className }: IconProps) {
+  return (
+    <svg {...base(size)} className={className}>
+      <path
+        d="M13 3 L5 13.5 L11 13.5 L9.5 21 L19 10.5 L13 10.5 Z"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinejoin="round"
+        fill="none"
+      />
+    </svg>
+  );
+}
+
+/** Shield with check — escrow / protection */
+export function ShieldCheckIcon({ size = 24, color = 'currentColor', strokeWidth = 1.6, className }: IconProps) {
+  return (
+    <svg {...base(size)} className={className}>
+      <path
+        d="M12 3 L20 6 V12 C20 16.5 16.5 19.5 12 21 C7.5 19.5 4 16.5 4 12 V6 Z"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8.5 12.5 L11 15 L15.5 10.5"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+/** Hourglass — timeline / waiting */
+export function HourglassIcon({ size = 24, color = 'currentColor', strokeWidth = 1.6, className }: IconProps) {
+  return (
+    <svg {...base(size)} className={className}>
+      <path
+        d="M6 3 H18 M6 21 H18 M7 3 V8 L12 12 L17 8 V3 M7 21 V16 L12 12 L17 16 V21"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinejoin="round"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+/** Flask — experiment / pilot */
+export function FlaskIcon({ size = 24, color = 'currentColor', strokeWidth = 1.6, className }: IconProps) {
+  return (
+    <svg {...base(size)} className={className}>
+      <path
+        d="M10 3 V8.5 L5.5 18.5 C5 19.6 5.8 21 7 21 H17 C18.2 21 19 19.6 18.5 18.5 L14 8.5 V3"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinejoin="round"
+        strokeLinecap="round"
+      />
+      <path d="M9 3 H15" stroke={color} strokeWidth={strokeWidth} strokeLinecap="round" />
+      <path d="M7 14 H17" stroke={color} strokeWidth={strokeWidth} strokeLinecap="round" />
+    </svg>
+  );
+}

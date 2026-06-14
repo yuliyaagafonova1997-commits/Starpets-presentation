@@ -14,7 +14,8 @@ export const chartColors = {
   orange50: '#FFF5E6',
 
   // Grayscale
-  black: '#000000',
+  // (the legacy `black` key below resolves to gray1000 — kept as the canonical
+  //  brand black to avoid a TS duplicate-key error)
   gray1000: '#0A0A0C',
   gray900: '#1D1D1F',
   gray800: '#2C2C2E',
@@ -32,7 +33,7 @@ export const chartColors = {
   // Prefer the named tokens above. Kept only for backwards compatibility
   // with pre-refactor call-sites — do not use in new code.
   orange: '#FE9920',     // → orange500
-  black: '#0A0A0C',      // → gray1000
+  black: '#0A0A0C',      // → gray1000 (canonical brand black; was duplicated above)
   gray: '#86868B',       // → gray400
   lightGray: '#A1A1A6',  // → gray300
 } as const;

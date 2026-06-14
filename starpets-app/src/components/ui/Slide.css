@@ -143,4 +143,13 @@
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+  /* Force all backgrounds (cards, dots, pills) to render in the exported PDF.
+     Without this Chrome strips them by default ("economy" mode). */
+  .slide,
+  .slide *,
+  .slide *::before,
+  .slide *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }

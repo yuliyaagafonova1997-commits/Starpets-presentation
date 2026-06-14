@@ -10,11 +10,13 @@ interface SlideProps {
   dark?: boolean;
   /** Footer logo source. Defaults to the dark-text logo. */
   logoSrc?: string;
+  /** Extra className applied to the outer .slide wrapper (e.g. for full-bleed background images). */
+  className?: string;
 }
 
-export function Slide({ number, total, children, center = false, dark = false, logoSrc = '/logo.svg' }: SlideProps) {
+export function Slide({ number, total, children, center = false, dark = false, logoSrc = '/logo.svg', className }: SlideProps) {
   return (
-    <div className={`slide ${dark ? 'slide-dark' : ''}`}>
+    <div className={`slide ${dark ? 'slide-dark' : ''} ${className ?? ''}`.trim()}>
       <div
         className="slide-inner"
         style={center ? { justifyContent: 'center', alignItems: 'center' } : undefined}

@@ -28,31 +28,31 @@
 }
 
 .conclusions-box {
-  background: #000;
-  border: 1px solid #000;
+  background: var(--accent-softer);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius);
-  padding: 26px 30px;
+  padding: 24px 30px;
 }
 
 .conclusions-box h4 {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  color: #fff;
-  margin-bottom: 16px;
+  color: var(--accent-text);
+  margin-bottom: 14px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
 .conclusions-box ol {
-  padding-left: 24px;
+  padding-left: 22px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  color: #fff;
+  gap: 10px;
+  color: var(--text-primary);
 }
 
 .conclusions-box li {
-  font-size: 15px;
-  color: #fff;
-  line-height: 1.6;
+  font-size: 14.5px;
+  color: var(--text-primary);
+  line-height: 1.55;
 }

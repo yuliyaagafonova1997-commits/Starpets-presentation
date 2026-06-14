@@ -3,9 +3,13 @@ import './HeroSlide.css'
 
 export function HeroSlide() {
   return (
-    <Slide number={1} total={16} dark center logoSrc="/logo-white.svg">
+    <Slide number={1} total={16} dark center logoSrc="/logo-white.svg" className="slide-hero-bg">
       <div className="hero-content">
-        <img className="hero-logo" src="/logo-white.svg" alt="Starpets" />
+        <div className="hero-logos">
+          <img className="hero-logo" src="/logo-white.svg" alt="Starpets" />
+          <span className="hero-logos-x" aria-hidden="true">×</span>
+          <img className="hero-logo hero-logo--poe" src="/poe-logo.png" alt="Path of Exile" />
+        </div>
         <div className="hero-eyebrow">
           <span className="hero-eyebrow-dot" />
           Path of Exile · Стратегия
