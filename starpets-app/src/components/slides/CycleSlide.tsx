@@ -38,7 +38,7 @@ const phases = [
 
 export function CycleSlide() {
   return (
-    <Slide number={10} total={16}>
+    <Slide number={11} total={17}>
       <div className="section-header">
         <h2 className="section-title">Цикличность игры и сценарии покупки</h2>
         <p className="section-subtitle">

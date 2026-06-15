@@ -4,6 +4,7 @@ import {
   FieldResearchSlide,
   ResearcherInsightsSlide,
   AudienceSlide,
+  InGameStrugglesSlide,
   PainDiagramSlide,
   WhyNeverBoughtSlide,
   WhatMattersSlide,
@@ -27,6 +28,7 @@ function App() {
       <ResearcherInsightsSlide />
       <AudienceSlide />
       <PainDiagramSlide />
+      <InGameStrugglesSlide />
       <WhyNeverBoughtSlide />
       <WhatMattersSlide />
       <HypothesesSlide />

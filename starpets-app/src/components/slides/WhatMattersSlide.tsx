@@ -19,7 +19,7 @@ const whatMattersData = [
 
 export function WhatMattersSlide() {
   return (
-    <Slide number={8} total={16}>
+    <Slide number={9} total={17}>
       <div className="section-header">
         <h2 className="section-title">Что важно при выборе маркетплейса</h2>
         <p className="section-subtitle">

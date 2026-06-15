@@ -3,7 +3,7 @@ import './HeroSlide.css'
 
 export function HeroSlide() {
   return (
-    <Slide number={1} total={16} dark center logoSrc="/logo-white.svg" className="slide-hero-bg">
+    <Slide number={1} total={17} dark center logoSrc="/logo-white.svg" className="slide-hero-bg">
       <div className="hero-content">
         <div className="hero-logos">
           <img className="hero-logo" src="/logo-white.svg" alt="Starpets" />

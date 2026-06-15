@@ -4,7 +4,7 @@ import './BriefMarketingSlide.css';
 
 export function BriefInfluenceCrmSlide() {
   return (
-    <Slide number={15} total={16}>
+    <Slide number={16} total={17}>
       <div className="section-header">
         <h2 className="section-title">Брифинг команд: Influence и&nbsp;CRM</h2>
         <p className="section-subtitle">

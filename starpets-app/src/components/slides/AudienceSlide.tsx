@@ -21,7 +21,7 @@ const gamerData = [
 
 export function AudienceSlide() {
   return (
-    <Slide number={5} total={16}>
+    <Slide number={5} total={17}>
       <div className="section-header">
         <h2 className="section-title">Кто наша аудитория</h2>
         <p className="section-subtitle">

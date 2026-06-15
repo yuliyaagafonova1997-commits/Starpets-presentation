@@ -34,7 +34,7 @@ const todos = [
 
 export function CurrencyKingSlide() {
   return (
-    <Slide number={11} total={16}>
+    <Slide number={12} total={17}>
       <div className="section-header">
         <h2 className="section-title">Валюта — король</h2>
         <p className="section-subtitle">

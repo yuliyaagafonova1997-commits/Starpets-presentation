@@ -4,7 +4,7 @@ import './BriefMarketingSlide.css';
 
 export function BriefMarketingPaidSlide() {
   return (
-    <Slide number={14} total={16}>
+    <Slide number={15} total={17}>
       <div className="section-header">
         <h2 className="section-title">Брифинг: маркетинг и&nbsp;Paid</h2>
         <p className="section-subtitle">

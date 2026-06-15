@@ -3,7 +3,7 @@ import './ViralMechanicsSlide.css'
 
 export function ViralMechanicsSlide() {
   return (
-    <Slide number={12} total={16}>
+    <Slide number={13} total={17}>
       <div className="section-header viral-header">
         <h2 className="section-title">
           Виральная механика без&nbsp;dev&nbsp;ресурса

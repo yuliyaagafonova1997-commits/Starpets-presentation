@@ -3,7 +3,7 @@ import './FieldResearchSlide.css'
 
 export function FieldResearchSlide() {
   return (
-    <Slide number={3} total={16}>
+    <Slide number={3} total={17}>
       <div className="section-header">
         <h2 className="section-title">Полевая разведка</h2>
         {/*<p className="section-subtitle">

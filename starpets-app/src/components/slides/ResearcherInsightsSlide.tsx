@@ -3,7 +3,7 @@ import './ResearcherInsightsSlide.css';
 
 export function ResearcherInsightsSlide() {
   return (
-    <Slide number={4} total={16}>
+    <Slide number={4} total={17}>
       <div className="section-header">
         <h2 className="section-title">Инсайты для ресерчера</h2>
       </div>

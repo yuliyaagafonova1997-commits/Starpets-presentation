@@ -27,7 +27,7 @@ const questions = [
 
 export function OpenQuestionsSlide() {
   return (
-    <Slide number={16} total={16}>
+    <Slide number={17} total={17}>
       <div className="section-header">
         <h2 className="section-title">Открытые вопросы и риски</h2>
         <p className="section-subtitle">

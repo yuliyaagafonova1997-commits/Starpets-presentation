@@ -20,7 +20,7 @@ const insights = [
 
 export function MainInsightSlide() {
   return (
-    <Slide number={2} total={16}>
+    <Slide number={2} total={17}>
       <img src="/face.jpg" alt="" className="insight-face-bg" />
       <div className="section-header">
         <h2 className="section-title">Главный инсайт</h2>

@@ -1,7 +1,7 @@
-import { Slide } from '../ui/Slide';
-import { BanIcon, ScaredIcon, MoneyIcon, LinkIcon } from '../icons';
-import { chartColors } from '../charts/chartColors';
-import './PainDiagramSlide.css';
+import { chartColors } from '../charts/chartColors'
+import { BanIcon, LinkIcon, MoneyIcon, ScaredIcon } from '../icons'
+import { Slide } from '../ui/Slide'
+import './PainDiagramSlide.css'
 
 // Top-3 barriers derived from the in-game struggles survey (PDF p.5 + p.6).
 // 4 (jonatan eblan geimdzaina, 2.8%) included in the footnote on the FieldResearch slide.
@@ -30,28 +30,28 @@ const topPains = [
     sub: 'Страх обмана — решается escrow и прозрачной историей сделок',
     count: 5,
   },
-];
+]
 
 const other = [
   { icon: LinkIcon, label: 'P2P подозрительно', pct: '10.3%' },
   { icon: ScaredIcon, label: 'Долгий вывод', pct: '6.9%' },
   { icon: MoneyIcon, label: 'Высокие комиссии', pct: '6.9%' },
   { icon: BanIcon, label: 'Поддержка — боль', pct: '3.5%' },
-];
+]
 
 export function PainDiagramSlide() {
   return (
-    <Slide number={6} total={16}>
+    <Slide number={6} total={17}>
       <div className="section-header">
-        <h2 className="section-title">Главные боли и&nbsp;барьеры</h2>
+        <h2 className="section-title">Барьеры: основные</h2>
         <p className="section-subtitle">
-          Три топ-причины покрывают&nbsp;72% негатива аудитории. Бан аккаунта&nbsp;— главный
-          страх, и&nbsp;именно его должен снять продукт
+          Три топ-причины покрывают&nbsp;72% негатива аудитории. Бан
+          аккаунта&nbsp;— главный страх, и&nbsp;именно его должен снять продукт
         </p>
       </div>
       <div className="pain-top">
         {topPains.map((p, i) => {
-          const Icon = p.icon;
+          const Icon = p.icon
           return (
             <div key={i} className="pain-top-card">
               <div className="pain-top-icon" style={{ color: p.color }}>
@@ -63,14 +63,14 @@ export function PainDiagramSlide() {
               <h4>{p.title}</h4>
               <p>{p.sub}</p>
             </div>
-          );
+          )
         })}
       </div>
       <div className="pain-secondary">
         <div className="pain-secondary-label">Остальные барьеры</div>
         <div className="pain-secondary-grid">
           {other.map((o, i) => {
-            const Icon = o.icon;
+            const Icon = o.icon
             return (
               <div key={i} className="pain-secondary-item">
                 <span className="pain-secondary-icon">
@@ -79,10 +79,10 @@ export function PainDiagramSlide() {
                 <span className="pain-secondary-name">{o.label}</span>
                 <span className="pain-secondary-pct">{o.pct}</span>
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </Slide>
-  );
+  )
 }

@@ -3,6 +3,7 @@ export { MainInsightSlide } from './MainInsightSlide';
 export { FieldResearchSlide } from './FieldResearchSlide';
 export { ResearcherInsightsSlide } from './ResearcherInsightsSlide';
 export { AudienceSlide } from './AudienceSlide';
+export { InGameStrugglesSlide } from './InGameStrugglesSlide';
 export { PainDiagramSlide } from './PainDiagramSlide';
 export { WhyNeverBoughtSlide } from './WhyNeverBoughtSlide';
 export { WhatMattersSlide } from './WhatMattersSlide';

@@ -26,7 +26,7 @@ const tasks = [
 
 export function BriefProductSlide() {
   return (
-    <Slide number={13} total={16}>
+    <Slide number={14} total={17}>
       <div className="section-header">
         <h2 className="section-title">Брифинг команд: продукт</h2>
         <p className="section-subtitle">

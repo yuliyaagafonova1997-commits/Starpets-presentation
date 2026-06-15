@@ -54,7 +54,7 @@ const comments: Comment[] = [
 
 export function WhyNeverBoughtSlide() {
   return (
-    <Slide number={7} total={16}>
+    <Slide number={8} total={17}>
       <div className="section-header">
         <h2 className="section-title">
           Барьеры: почему не покупают на маркетплейсах
