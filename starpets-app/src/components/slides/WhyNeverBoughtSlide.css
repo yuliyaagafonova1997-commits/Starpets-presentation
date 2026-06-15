@@ -1,8 +1,17 @@
+.never-bought-comments {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
 .never-bought-layout {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 28px;
-  align-items: center;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 32px;
+  align-items: stretch;
   flex: 1;
   min-height: 0;
 }
@@ -10,34 +19,13 @@
 .never-bought-chart {
   background: var(--card-bg);
   border-radius: var(--radius);
-  padding: 14px;
+  padding: 28px 24px;
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.never-bought-chart .pie-chart {
   flex-direction: column;
-  gap: 10px;
-}
-
-.never-bought-chart .pie-legend {
-  column-gap: 10px;
-  row-gap: 3px;
-}
-
-.never-bought-chart .pie-legend li {
-  font-size: 10px;
-  gap: 5px;
-}
-
-.never-bought-chart .pie-center-label {
-  font-size: 22px;
-}
-
-.never-bought-chart .pie-center-sublabel {
-  font-size: 9px;
-  margin-top: 2px;
+  justify-content: center;
+  /* Allow bubbles to extend outside the card */
+  overflow: visible;
 }
 
 .never-bought-takeaways {
@@ -45,6 +33,7 @@
   flex-direction: column;
   gap: 8px;
   min-width: 0;
+  justify-content: center;
 }
 
 .takeaway {
@@ -99,4 +88,92 @@
   font-size: 12px;
   color: #f5f5f7;
   line-height: 1.4;
+}
+
+/* Floating comment bubbles (positioned absolutely around the chart). */
+.comment-bubble {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 4px 12px 4px 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  z-index: 3;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.comment-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.comment-body {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.comment-name {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
+}
+
+.comment-text {
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+/* Even horizontal distribution across 3 height rows. */
+.comment-top-left {
+  top: 4px;
+  left: 0;
+}
+.comment-top {
+  top: 44px;
+  left: 16%;
+}
+.comment-top-right {
+  top: 4px;
+  left: 32%;
+}
+.comment-far-top-right {
+  top: 4px;
+  right: 0;
+}
+.comment-right {
+  top: 44px;
+  right: 16%;
+}
+.comment-bottom-right {
+  top: 84px;
+  right: 0;
+}
+.comment-bottom-left {
+  top: 84px;
+  left: 47%;
+}
+.comment-left {
+  top: 84px;
+  left: 0;
+}
+
+@media print {
+  .comment-bubble {
+    box-shadow: none;
+  }
 }

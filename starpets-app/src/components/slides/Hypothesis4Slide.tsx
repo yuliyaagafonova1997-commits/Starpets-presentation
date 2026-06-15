@@ -43,7 +43,6 @@ export function Hypothesis4Slide() {
                   color: chartColors.gray,
                 },
               ],
-              //caption: 'N = 36, single choice',
             }}
             right={{
               title: 'Продают',
@@ -64,7 +63,6 @@ export function Hypothesis4Slide() {
                   color: chartColors.gray,
                 },
               ],
-              //caption: 'N = 36, single choice',
             }}
             divider="↔"
           />

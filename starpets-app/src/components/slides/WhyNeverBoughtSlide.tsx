@@ -1,21 +1,56 @@
-import { PieChart } from '../charts/PieChart'
-import { chartColors } from '../charts/chartColors'
-import { Slide } from '../ui/Slide'
-import './WhyNeverBoughtSlide.css'
+import { Slide } from '../ui/Slide';
+import { BarChart } from '../charts/BarChart';
+import { chartColors } from '../charts/chartColors';
+import './WhyNeverBoughtSlide.css';
 
-// PDF page 6 — главная причина, по которой не покупали на сторонних площадках.
-// 29 ответов. Видимые значения с PDF: 17.2% (5), 27.6% (8), 10.3% (3), 27.6% (8).
-// Оставшиеся 5 ответов распределены по 4 малым категориям — взяты пропорционально
-// видимым размерам сегментов.
-const neverBoughtData = [
-  { label: 'Страх бана аккаунта', value: 8, color: chartColors.gray1000 },
-  { label: 'Хочу заработать валюту сам', value: 8, color: chartColors.gray500 },
-  { label: 'Риск скама и потери денег', value: 5, color: chartColors.gray600 },
-  { label: 'Цены слишком высокие', value: 3, color: chartColors.orange500 },
-  { label: 'Процесс кажется сложным', value: 2, color: chartColors.orange700 },
-  { label: 'Не знал, что так можно', value: 2, color: chartColors.orange300 },
-  { label: 'Нет надёжной площадки', value: 1, color: chartColors.gray },
-]
+// Что важно покупателю при покупке (PDF, 36 ответов).
+// Используем эти данные здесь: разрыв между тем, что важно покупателю,
+// и тем, что маркетплейсы реально дают, = и есть барьер.
+const barriersData = [
+  { label: 'Репутация площадки', value: 75, count: 27, highlight: true },
+  { label: 'Цена и выгода', value: 72.2, count: 26, highlight: true },
+  { label: 'История сделок продавца', value: 66.7, count: 24, color: chartColors.black },
+  { label: 'Безопасность оплаты', value: 55.6, count: 20, color: chartColors.black },
+  { label: 'Скорость доставки', value: 52.8, count: 19, color: chartColors.black },
+  { label: 'Безопасность аккаунта', value: 44.4, count: 16, color: chartColors.black },
+  { label: 'Рекомендация стримера', value: 25, count: 9, color: chartColors.gray },
+  { label: 'Видимость маркетплейса', value: 19.4, count: 7, color: chartColors.gray },
+  { label: 'Качество поддержки', value: 19.4, count: 7, color: chartColors.gray },
+  { label: 'Не знаю', value: 2.8, count: 1, color: chartColors.gray },
+  { label: 'Нет', value: 2.8, count: 1, color: chartColors.gray },
+  { label: 'Не куплю', value: 2.8, count: 1, color: chartColors.gray },
+];
+
+// Free-text жалобы — визуализируем как «облачка» с аватаром и именем,
+// разбросанные по разным сторонам чарта.
+type CommentPos =
+  | 'top-left'
+  | 'top'
+  | 'top-right'
+  | 'far-top-right'
+  | 'right'
+  | 'bottom-right'
+  | 'bottom-left'
+  | 'left';
+
+interface Comment {
+  id: number;
+  name: string;
+  text: string;
+  pos: CommentPos;
+  color: string;
+}
+
+const comments: Comment[] = [
+  { id: 1, name: 'Алексей', text: 'Нет доверия', pos: 'top-left', color: chartColors.orange500 },
+  { id: 2, name: 'Михаил', text: 'Против правил, ведёт к бану', pos: 'top', color: chartColors.gray1000 },
+  { id: 3, name: 'Дмитрий', text: 'Боюсь скама', pos: 'top-right', color: chartColors.gray600 },
+  { id: 4, name: 'Артём', text: 'Долгий вывод средств', pos: 'far-top-right', color: chartColors.orange700 },
+  { id: 5, name: 'Сергей', text: 'P2P — мутная схема', pos: 'right', color: chartColors.gray400 },
+  { id: 6, name: 'Андрей', text: 'Поддержка — боль', pos: 'bottom-right', color: chartColors.gray300 },
+  { id: 7, name: 'Иван', text: 'Грубые продавцы', pos: 'bottom-left', color: chartColors.orange600 },
+  { id: 8, name: 'Николай', text: 'Высокие комиссии', pos: 'left', color: chartColors.gray700 },
+];
 
 export function WhyNeverBoughtSlide() {
   return (
@@ -25,50 +60,60 @@ export function WhyNeverBoughtSlide() {
           Барьеры: почему не покупают на маркетплейсах
         </h2>
         <p className="section-subtitle">
-          Главный страх — бан аккаунта. Два этих барьера должен снять продукт
+          Доверие, безопасность и&nbsp;скорость — топ-факторы. Маркетплейсы
+          их&nbsp;не&nbsp;дают — это и&nbsp;есть барьер
         </p>
+      </div>
+      <div className="never-bought-comments">
+        {comments.map(c => (
+          <div key={c.id} className={`comment-bubble comment-${c.pos}`}>
+            <div className="comment-avatar" style={{ background: c.color }}>
+              {c.name[0]}
+            </div>
+            <div className="comment-body">
+              <div className="comment-name">{c.name}</div>
+              <div className="comment-text">{c.text}</div>
+            </div>
+          </div>
+        ))}
       </div>
       <div className="never-bought-layout">
         <div className="never-bought-chart">
-          <PieChart
-            data={neverBoughtData}
-            size={200}
-            thickness={32}
-            centerLabel="29"
-            centerSubLabel="не покупали"
-            countUnit={29}
-            legendPosition="bottom"
+          <BarChart
+            data={barriersData}
+            compact
+            caption="Что важно при покупке"
           />
         </div>
         <div className="never-bought-takeaways">
           <div className="takeaway takeaway-primary">
-            <div className="takeaway-num">27.6%</div>
+            <div className="takeaway-num">75%</div>
             <div className="takeaway-text">
-              <strong>Боятся бана аккаунта</strong> — главный страх аудитории
+              <strong>Главный барьер — доверие</strong> — репутация площадки
+              и&nbsp;история сделок продавца
             </div>
           </div>
           <div className="takeaway">
-            <div className="takeaway-num">27.6%</div>
+            <div className="takeaway-num">55%</div>
             <div className="takeaway-text">
-              <strong>Хотят заработать валюту сами</strong> — не мешают
-              остальным
+              <strong>Безопасность оплаты</strong> — escrow закрывает этот страх
             </div>
           </div>
           <div className="takeaway">
-            <div className="takeaway-num">17.2%</div>
+            <div className="takeaway-num">44%</div>
             <div className="takeaway-text">
-              <strong>Страх скама</strong> — решается escrow
+              <strong>Безопасность аккаунта</strong> — страховка от&nbsp;бана
             </div>
           </div>
           <div className="takeaway takeaway-product">
             <div className="takeaway-label">Вывод для продукта</div>
             <div className="takeaway-text">
-              Escrow, страховка от&nbsp;бана и&nbsp;импорт репутации
-              конвертируют эту аудиторию
+              Escrow, страховка от&nbsp;бана, импорт репутации — три фичи закрывают
+              топ-3 барьера
             </div>
           </div>
         </div>
       </div>
     </Slide>
-  )
+  );
 }

@@ -12,9 +12,9 @@ const whatMattersData = [
   { label: 'Безопасность оплаты', value: 55.6, count: 20 },
   { label: 'Скорость доставки', value: 52.8, count: 19 },
   { label: 'Безопасность аккаунта', value: 44.4, count: 16 },
-  { label: 'Рекомендация стримера', value: 25, count: 9 },
-  { label: 'Качество поддержки', value: 19.4, count: 7 },
-  { label: 'Узнаваемость бренда', value: 19.4, count: 7 },
+  { label: 'Рекомендация стримера', value: 25, count: 9, color: chartColors.gray },
+  { label: 'Качество поддержки', value: 19.4, count: 7, color: chartColors.gray },
+  { label: 'Узнаваемость бренда', value: 19.4, count: 7, color: chartColors.gray },
 ];
 
 export function WhatMattersSlide() {

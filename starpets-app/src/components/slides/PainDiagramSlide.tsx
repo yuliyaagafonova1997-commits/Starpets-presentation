@@ -62,7 +62,6 @@ export function PainDiagramSlide() {
               </div>
               <h4>{p.title}</h4>
               <p>{p.sub}</p>
-              <div className="pain-top-count">N&nbsp;=&nbsp;{p.count}</div>
             </div>
           );
         })}
